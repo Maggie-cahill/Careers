@@ -36,11 +36,18 @@
 </nav>
 
 <div class="body-content">
-    <div class="title">
-        <h1>Questions or Concerns?</h1>
+
+    <div class="title-background">
+        <div class="title">
+            <h1>Questions or Concerns?</h1>
+        </div>
     </div>
 
-    <div class="form-content"></div>
+    <div class="form-content">
+        <div class="form-header">
+            <h1>Submit a Query</h1>
+        </div>
+    </div>
 </div>
 
 <div class = "divider" style = "border-top: none; margin-top: 100px;"></div>
