@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: "Gordita Medium", serif;
+    letter-spacing: 1.5px;
+}
+
+p {
+    font-family: "ITC Avant Garde Gothic", serif;
+    letter-spacing: 1px;    
+}
+
+.navbar {
+    list-style-type: none;
+    font-family: "Halyard Display SemiBold", serif;
+
+
+    padding: 15px;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 15px;
+    margin-left: 15px;
+
+    font-size: 1.5em;
+    color: #176767;
+    transition: color 300ms ease-in-out;
+
+}
+
+.navbar li:hover {
+    color: #00244D;
+}
+
+.menu {
+    background-color: white;
+    border-bottom: 5px solid #176767;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 25px;
+    padding-left: 0px;
+}
+
+.logo {
+    width: 250px;
+    height: 70px;
+    min-width: 100px;
+    max-width: 300px;
+
+    padding: 15px;
+    padding-right: 25px;
+    border: 5px double #135066;
+    background-color: rgba(215, 215, 215, 0.297);
+
+    border-left: none;
+    border-radius: 0px 20px 20px 0px;
+
+}
+
+.logo img {
+    width: 105%;
+    
+}
+
+
+.login {
+    font-family: "Halyard Display Black", serif;
+    background-color: #176767;
+    border-radius: 5px;
+    border: 0;
+
+    font-size: 1.2em;
+    font-weight: 700;
+    color: white;
+
+    padding: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 20px;
+
+    transition: background-color 500ms ease-in-out;
+}
+
+.login:hover {
+    background-color: #00244D;
+}
+
+
+
+/* Footer Styles */
+
+.footer {
+    min-height: 300px;
+    width: 100%;
+    border-top: 5px double white;
+
+    background-color: #135066;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 50px;
+    margin-top: 100px;
+}
+
+.footer-navigation {
+    display: flex;
+    gap: 120px;
+    margin-right: 50px;
+
+}
+
+.footer-navigation ul li {
+    list-style-type: none;
+    color: white;
+    margin-bottom: 15px;
+    font-family: "ITC Avant Garde Gothic", serif;
+    letter-spacing: 1px;
+    font-size: .9em;
+    line-height: 25px;
+
+}
+
+.footer-navigation ul li:first-child {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 25px;
+    font-family: "Gordita Medium"
+}
+
+.logo_background {
+    background-color: white;
+    border: 4px double #135066;
+    border-left:none;
+    color: white;
+    width: 250px;
+    height: 70px;
+    padding: 20px;
+    padding-bottom: 15px;
+    padding-right: 20px;
+
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: 0px;
+}
+
+.logo_background p {
+    padding-left: 0;
+    margin-top: 40px;
+    margin-left: 0;
+}
+
+.logo_background img {
+    width: 100%;
+}
+
+.footer ul li i {
+    font-size: 1.3em;
+    margin-right:10px;
+}
+
+
+
