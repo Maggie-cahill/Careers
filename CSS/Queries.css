@@ -1,10 +1,10 @@
 .body-content {
     padding: 20px;
-    background-color: #B1D5E6;
+    background-color: rgb(177, 213, 230, .5);
 }
 
 .title {
-    background-color:#B1D5E6;
+    background-color:#00244D;
     width: 40%;
     min-width:fit-content;
     max-width: 500px;
@@ -22,7 +22,8 @@
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    border: 5px solid black;
+    border: 5px solid white;
     border-radius: 30px;
     background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 7px #5f92cc;
 }
