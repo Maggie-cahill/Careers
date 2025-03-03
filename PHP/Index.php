@@ -10,9 +10,6 @@
 
 
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-</style>
 
 
 </head>
@@ -22,17 +19,17 @@
 <nav>
     <div class="menu">
 
+        <a href = "Index.php">
         <div class="logo">
             <img src="../Images/Final_Logo.png" alt="ATU Career Path Logo">
         </div>
+        </a>
 
         <ul class="navbar">
-            <li style = "font-size: 1.8em;"> <i class="fa-solid fa-envelope"></i> </li>
-            <li> Jobs </li>
-            <li> Appointments </li>
-            <li>
-                <button class="login"> Sign In </button>
-            </li>
+            <a href = "Queries.php"><li style = "font-size: 1.8em;"> <i class="fa-solid fa-envelope"></i> </li></a>
+            <a href = "Jobs.php"><li> Jobs </li></a>
+            <a href = "Appointments.php"><li> Appointments </li></a>
+            <a href = "Login.php"><li> <button class="login"> Sign In </button></li></a>
         </ul>
     </div>
     
@@ -87,16 +84,16 @@
             </p>
         </div>
     </div>
-    <h1>HELLO THE GITHUB IS WORKING</h1>
-    <div class="subsection">
-        <div class="text-content" style = "border-radius: 0px 50px 50px 0px; border-left: none; border-right: 10px double white;">
-            <h1 style = "text-align: left;"> Appointments </h1>
+
+    <div class="subsection second">
+        <div class="text-content">
+            <h1> Appointments </h1>
             
             <div class = "underline" style = "justify-content: start;">
                 <span></span>
             </div>
 
-            <p style = "text-align: left;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
                 labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
                 nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
                 velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 

@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    position: relative;
 }
 
 h1, h2, h3 {
@@ -35,8 +36,19 @@ p {
 
 }
 
+nav {
+    position:sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
 .navbar li:hover {
     color: #00244D;
+}
+
+.navbar a {
+    text-decoration: none;
 }
 
 .menu {
@@ -45,6 +57,7 @@ p {
 
     display: flex;
     justify-content: space-between;
+
 
     padding: 25px;
     padding-left: 0px;
@@ -170,3 +183,10 @@ p {
 
 
 
+.divider {
+    height: 80px;
+    width: 100%;
+    background-color: white;
+    border-bottom: 5px solid teal;
+    border-top: 8px double teal;
+}
