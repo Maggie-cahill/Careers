@@ -16,11 +16,8 @@ p {
 .navbar {
     list-style-type: none;
     font-family: "Halyard Display SemiBold", serif;
-
-
     padding: 15px;
     margin: 0;
-
     display: flex;
     align-items: center;
 }
@@ -41,6 +38,7 @@ nav {
     top: 0;
     width: 100%;
     z-index: 1;
+    box-shadow: 0px 1px 3px rgb(0, 57, 57);
 }
 
 .navbar li:hover {

@@ -1,12 +1,27 @@
+body {
+    background-color: rgba(72, 192, 72, 0.155);
+}
+
 .body-content {
     background-color: white;
     padding-bottom: 80px;
+    border: 5px solid white;
+    border-radius: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    width: 90%;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.322);
+   
 }
 
 .divider {
     margin-top: 0;
     border-top: none;
     height: 20px;
+    margin-top: 30px;
+    background-color: rgba(240, 248, 255, 0);
 }
 
 
@@ -14,14 +29,13 @@
 .title-background {
     height:fit-content;
     width: 100%;
-    padding: 30px 0px 70px 20px;
+    padding: 30px 0px 30px 20px;
     margin-bottom: 40px;
-    
 
 }
 
 .title {
-    background-color:#006c19;
+    background-color:rgb(186, 231, 254); 
     width: 40%;
     min-width:fit-content;
     max-width: 500px;
@@ -30,24 +44,97 @@
     padding-right: 50px;
     border: 5px solid white;
     border-radius: 20px;
-    box-shadow: 10px 10px  #f8ed1a;
+    box-shadow: 10px 10px  rgb(17, 168, 140);
+}
+
+.subtext {
+    margin: 30px;
+    padding: 20px;
+
+}
+
+.hours-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hours {
+    margin-left: 30px;
+    padding: 30px;
+    border: 5px solid white;
+    border-radius: 20px;
+    background-color: rgba(212, 210, 41, 0.171);
+    min-width: 200px;
+    
+}
+
+.hours h1 {
+    padding-left: 10px;
+    margin-bottom: 35px;
+}
+
+table {
+    border-spacing: 20px;
+    border: 3px double black;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+}
+th  {
+    padding-right: 30px;
+    text-align: left;
+    font-family: "Gordita Medium", serif;
+    font-size: 1.1em; 
+}
+
+
+td {
+    font-family: "ITC Avant Garde Gothic", serif;
+}
+
+td:first-of-type, td:nth-of-type(2) {
+    padding-right: 10px;
+}
+
+.closed {
+    text-align: right;
+    padding-right: 0;
 }
 
 
 
+.appointment-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: stretch;
+    padding: 40px;
+    justify-content: center;
+}
+
 .appointment-element {
     max-width: 350px;
-    border: 5px solid black;
+    border: 5px solid white;
     border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     
+
+    transition: box-shadow 300ms ease-in-out;
+}
+
+.appointment-element:hover {
+    box-shadow: 13px 14px 0px rgb(82, 157, 100);
 }
 
 .appointment-element img {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     margin-bottom: 0;
+    height: 200px;
+    display: block;
 }
 
 .appointment-element .text-content {
@@ -60,22 +147,64 @@
     border-top: 5px solid rgb(255, 255, 255);
     margin-top: 0;
     text-align: center;
-    background-color: #0f6e25;
+    background-color: rgb(17, 168, 140);
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     color: white;
+    margin: 0;
+    flex: 1;
+}
 
+.appointment-element .text-content p {
+    font-size: .7em;
 }
 
 .appointment-element img {
     width: 100%;
+    margin: 0;
 }
 
 .appointment-element button {
     height: 50px;
+
     font-size: 1.2em;
     border-radius: 10px;
     padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: white;
+    border: 2px solid white;
+    font-family: "Gordita Medium", serif;
+
+    transition: color 500ms ease-in-out, background-color 500ms ease-in-out, padding 500ms ease-in-out, 
+    font-size 500ms ease-in-out, border 500ms ease-in-out;
+
 }
+
+
+.appointment-element button:hover {
+    font-size: 1.3em;
+    background-color: rgb(55, 207, 151);
+    padding: 15px;
+    padding-top: 10px;
+    border: none;
+    color: white;
+}
+
+
+/* Appointment Popup and Form */
+
+.booking-form {
+    background-color: white;
+    padding: 30px;
+    font-family: "Gordita Medium", serif;
+}
+
+input[type="date"] {
+    font-family: "ITC Avant Garde Gothic", serif;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+
+
