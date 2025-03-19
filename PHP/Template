@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Appointments</title>
+<title>Home</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
 
 <link rel="stylesheet" href="../CSS/General_Styles.css">
-<link rel="stylesheet" href="../CSS/Appointments.css">
+<link rel="stylesheet" href="../CSS/Home.css">
 
 
 
@@ -35,39 +35,7 @@
     
 </nav>
 
-<div class="body-content">
-
-    <div class="title-background">
-        <div class="title">
-            <h1>Schedule Appointments</h1>
-        </div>
-    </div>
-
-    <div class="subtext">
-        <p>
-            "questions and concerns" is correct and usable in written English. You can use it to express that 
-            something raises both questions and concerns--for example: The proposed changes to the health care 
-            system have raised a number of questions and concerns. "questions and concerns" is correct and usable 
-            in written English. You can use it to express that something raises both questions and concerns--for example: 
-            The proposed changes to the health care system have raised a number of questions and concerns.
-        </p>
-    </div>
-
-    <div class = "divider" style = "border-top: none; margin-top: 100px;"></div>
-
-    <div class="appointment-list">
-        <div class="appointment-element">
-            <img src="../Images/Office.jpg" alt="">
-            <div class="text-content">
-                <h1> CV Check </h1>
-                <p> Random description for the appointment type and what it involves</p>
-                <button id = "request_booking">Request Booking</button>
-            </div>
-        </div>
-    </div>
-
-
-</div>
+<div class="body-content"></div>
 
 <div class = "divider" style = "border-top: none; margin-top: 100px;"></div>
 

@@ -45,12 +45,58 @@
 
     <div class="form-content">
         <div class="form-header">
-            <h1>Submit a Query</h1>
+            <h1>Send Us Your Questions!</h1>
+            <p class = "subtext">Fill out the form and submit below</p>
         </div>
+
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+        <div class="form-body">
+            <div class="form-element">
+                <label for="type-of-question">Type of Question &ensp; *</label>
+                <select name="type-of-question" id="type-of-quest" required>
+                    <option value="default">Select One</option>
+                    <option value="apply-for-jobs">Applying For Jobs</option>
+                    <option value="cv-help">CV Help and Feedback</option>
+                    <option value="career-advice">Career Advice</option>
+                    <option value="find-part">Find Part Time Work</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-element">
+                <label for="subject">Subject &ensp; *</label>
+                <input type="text" name = "subject" id = "subject" required>
+            </div>
+
+            <div class="form-element">
+                <label for="question-description">Message &ensp;*</label>
+                <textarea name="question-description" id="question-description"></textarea>
+            </div>
+
+            <div class="form-element" id = "upload-stuff">
+                <label for="upload-files" style = "width: 100%;">Upload Files</label>
+                <div class="button-wrap">
+                    <label class = "upload-button" for = "upload-file"> Add Files &ensp;<i class="fa-solid fa-cloud-arrow-up"></i></label>
+                    <input type="file" id="upload-file" name="filename" multiple> 
+                </div>
+                <div id="file-list"></div>
+            </div>
+
+            <div class="form-element">
+                <span class = "separator"></span>
+            </div>
+
+            <div class="form-element" id = "submit-div">
+                <button type="submit" value = "Submit" id = "submit" >Send</button>
+            </div>
+
+        </div>
+    </form>
+
     </div>
 </div>
 
-<div class = "divider" style = "border-top: none; margin-top: 100px;"></div>
+<div class = "divider" ></div>
 
 
 <footer>
@@ -98,7 +144,8 @@
     </div>
 </footer>
 
-
+  
 </body>
 
+<script src="../JS/Queries.js" defer></script>
 </html>
