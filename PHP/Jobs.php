@@ -6,7 +6,7 @@
 
 
 <link rel="stylesheet" href="../CSS/General_Styles.css">
-<link rel="stylesheet" href="../CSS/Home.css">
+<link rel="stylesheet" href="../CSS/Jobs.css">
 
 
 
@@ -29,15 +29,153 @@
             <a href = "Queries.php"><li style = "font-size: 1.8em;"> <i class="fa-solid fa-envelope"></i> </li></a>
             <a href = "Jobs.php"><li> Jobs </li></a>
             <a href = "Appointments.php"><li> Appointments </li></a>
-            <a href = "Login.php"><li> <button class="login"> Sign In </button></li></a>
+            <a href = "Choose.php"><li> <button class="login"> Sign In </button></li></a>
         </ul>
     </div>
     
 </nav>
 
-<div class="body-content"></div>
+<div class="body-content">
+    <div class="title-content">
+        <h1>Find Career Opportunities</h1>
 
-<div class = "divider" style = "border-top: none; margin-top: 100px;"></div>
+        <form action="" id="search">
+        
+            <div id="search-and-filter">
+                <div class="form-element">
+                    <input type="text" id = "search-keyword">
+                    <button type="" id = "glass"> 
+                        <i class="fa-solid fa-magnifying-glass"></i> 
+                    </button>
+                    <button id = "arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                
+
+                <div class="form-element">
+                    <select name="career-type" id="career-type">
+                        <option value="" default>Role Type</option>
+                    </select>
+                </div>
+
+                <div class="form-element">
+                    <select name="field" id="field">
+                        <option value=""default>Field</option>
+                    </select>
+                </div>
+
+                <div class="form-element">
+                    <select name="location" id="location">
+                        <option value="" default>Location</option>
+                    </select>
+                </div>
+                
+                
+            </div>
+        </form>
+    </div>
+    
+</div>
+
+<div class = "divider"></div>
+
+<div id="job-content-div">
+    <div id="job-list">
+        <div class="job-listing">
+            <div class="company-title">
+                <img src="../Images/Office.jpg" alt="">
+                <h4> Company Name</h4>
+            </div>
+            <h2>Software Developer Intern</h2>
+            <p> Type of Position | Location</p>
+            <p> $40,000</p>
+            <p> 45 days to apply</p>
+
+            <form action="">
+                <button><i class="fa-solid fa-bookmark"></i></button>
+            </form>
+            <br><br>
+        </div>
+
+        <div class="job-listing">
+            <div class="company-title">
+                <img src="../Images/Office.jpg" alt="">
+                <h4> Company Name</h4>
+            </div>
+            <h2>Software Developer Intern</h2>
+            <p> Type of Position | Location</p>
+            <p> $40,000</p>
+            <p> 45 days to apply</p>
+
+            <form action="">
+                <button><i class="fa-solid fa-bookmark"></i></button>
+            </form>
+            <br><br>
+        </div>
+    </div>
+
+    <div id="job-information">
+        <div class="company-header">
+            <img src="../Images/Office.jpg" alt="">
+            <h1> Company Name</h1>
+        </div>
+
+        <div class="position-info">
+            <h1> Software Developer Intern</h1>
+            <h3><button>81 Days to Apply</button>  &nbsp; Closing Date: April 13th, 2025</h3>
+        </div>
+
+        <div class="general-details">
+            <h3>General Details</h3>
+            <button><i class="fa-solid fa-location-dot"></i>Location</button>
+            <button><i class="fa-solid fa-suitcase"></i>Permanent</button>
+            <button><i class="fa-solid fa-coins"></i> $40,000</button>
+        </div>
+
+
+        <div class="options">
+            <button><i class="fa-solid fa-arrow-up-right-from-square"></i>Apply</button>
+            <button><i class="fa-solid fa-bookmark"></i>Save</button>
+        </div>
+
+        <div class="job-body-content">
+            <div class="job-description">
+                <h3>Job Description</h3>
+                <p>We are seeking a diligent and motivated individual to join our Payroll Department. 
+                This role will be responsible for supporting the processing by assisting with payroll
+                processing, handling client and employee queries, and ensuring compliance with internal 
+                systems and procedures. This role involves coordinating payrolls, managing client
+                relationships, generating reports, and identifying areas for process improvement.
+                </p>
+            </div>
+
+            <div class="job-requirements">
+                <h3>Requirements</h3>
+                <p>This role will be responsible for supporting the processing by assisting with payroll
+                processing, handling client and employee queries, and ensuring compliance with internal 
+                systems and procedures. This role involves coordinating payrolls, managing client
+                relationships, generating reports, and i
+                </p>
+            </div>
+
+            <div class="job-skills">
+                <h3>Skills</h3>
+                <p>This role will be responsible for supporting the processing by assisting with payroll
+                processing, handling client and employee queries, and ensuring compliance with internal 
+                systems and procedures. This role involves coordinating payrolls, managing client
+                relationships, generating reports, and i
+                </p>
+            </div>
+
+            <div class="options">
+                <button><i class="fa-solid fa-arrow-up-right-from-square"></i>Apply</button>
+                <button><i class="fa-solid fa-bookmark"></i>Save</button>
+            </div>
+
+        </div>
+    </div>
+</div>
 
 
 <footer>

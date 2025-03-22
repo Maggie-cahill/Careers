@@ -1,0 +1,134 @@
+.body-content {
+    border-bottom: 2px solid black;
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    background-image: linear-gradient(160deg, #008080, #135066, #00244D, #107bac);
+    padding-bottom: 70px;
+}
+
+.student-div {
+    border: 2px solid black;
+    height: fit-content;
+    width: 40%;
+    border-radius: 30px;
+    background-color: white;
+
+}
+
+.business-div {
+    border: 2px solid black;
+    width: 40%;
+    border-radius: 30px;
+    background-color: white;
+    
+}
+
+
+.back {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 3em;
+    background-color: #ecd23e00;
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid white;
+    color:white;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color 300ms ease-in-out;
+}
+
+.back:hover {
+    background-color: #ccb324;
+}
+
+.back:focus {
+    background-color: #135066;
+}
+
+.background {
+    background-color: white;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+   
+}
+.header img {
+    width: 100%;
+}
+
+.header .image-div {
+    border: 10px double teal;
+    border-top: none;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0px 0px 3px white;
+    width: 400px;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.297);
+
+}
+
+.header h1{
+    width: 100%;
+    text-align: center;
+}
+
+.header p {
+    width: 70%;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+    padding: 20px;
+    border: 5px double teal;
+}
+
+/* Student and Business Content */
+
+.student-content, .business-content {
+    padding: 20px;
+    height: fit-content;
+}
+.student-content, .business-content {
+    text-align: center;
+}
+
+.student-content i, .business-content i {
+    font-size: 6em;
+}
+
+.student-content button i, .business-content button i {
+    font-size: 1.3em;
+    margin-left: 15px;
+}
+
+.student-content button, .business-content button {
+    height: 40px;
+    padding: 5px 15px;
+    border: 2px solid white;
+    font-family: "Gordita Medium", serif;
+    border-radius: 10px;
+    background-color: #1f7e34;
+    color: white;
+   
+}
+
+.business-content button {
+    background-color: #00244D;
+}

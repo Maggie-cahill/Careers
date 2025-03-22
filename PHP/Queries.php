@@ -29,7 +29,7 @@
             <a href = "Queries.php"><li style = "font-size: 1.8em;"> <i class="fa-solid fa-envelope"></i> </li></a>
             <a href = "Jobs.php"><li> Jobs </li></a>
             <a href = "Appointments.php"><li> Appointments </li></a>
-            <a href = "Login.php"><li> <button class="login"> Sign In </button></li></a>
+            <a href = "Choose.php"><li> <button class="login"> Sign In </button></li></a>
         </ul>
     </div>
     

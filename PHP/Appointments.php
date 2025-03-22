@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="../CSS/General_Styles.css">
 <link rel="stylesheet" href="../CSS/Appointments.css">
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
 
 
@@ -29,12 +30,12 @@
             <a href = "Queries.php"><li style = "font-size: 1.8em;"> <i class="fa-solid fa-envelope"></i> </li></a>
             <a href = "Jobs.php"><li> Jobs </li></a>
             <a href = "Appointments.php"><li> Appointments </li></a>
-            <a href = "Login.php"><li> <button class="login"> Sign In </button></li></a>
+            <a href = "Choose.php"><li> <button class="login"> Sign In </button></li></a>
         </ul>
     </div>
     
 </nav>
-
+<div id="backdrop"></div>
 <div class="body-content">
 
     <div class="title-background">
@@ -117,7 +118,7 @@
             <div class="text-content">
                 <h1> CV Check </h1>
                 <p> Random description for the appointment type and what it involves</p>
-                <button id = "request_booking">Request Booking</button>
+                <button id = "request_booking" onclick = "showFormModal()">Request Booking</button>
             </div>
         </div>
 
@@ -126,7 +127,7 @@
             <div class="text-content">
                 <h1> Career Advice </h1>
                 <p> Random description for the appointment type and what it involves</p>
-                <button id = "request_booking">Request Booking</button>
+                <button id = "request_booking" onclick = "showFormModal()">Request Booking</button>
             </div>
         </div>
 
@@ -135,7 +136,7 @@
             <div class="text-content">
                 <h1> Interview Prep </h1>
                 <p> Random description for the appointment type and what it involves</p>
-                <button id = "request_booking">Request Booking</button>
+                <button id = "request_booking" onclick = "showFormModal()">Request Booking</button>
             </div>
         </div>
 
@@ -144,7 +145,7 @@
             <div class="text-content">
                 <h1> Vacancies</h1>
                 <p> Random description for the appointment type and what it involves</p>
-                <button id = "request_booking">Request Booking</button>
+                <button id = "request_booking" onclick = "showFormModal()">Request Booking</button>
             </div>
         </div>
 
@@ -153,7 +154,7 @@
             <div class="text-content">
                 <h1> Applying For Jobs</h1>
                 <p> Random description for the appointment type and what it involves</p>
-                <button id = "request_booking">Request Booking</button>
+                <button id = "request_booking" onclick = "showFormModal()">Request Booking</button>
             </div>
         </div>
 
@@ -162,7 +163,7 @@
             <div class="text-content">
                 <h1>  Looking For Part Time Work </h1>
                 <p> Random description for the appointment type and what it involves</p>
-                <button id = "request_booking">Request Booking</button>
+                <button id = "request_booking" onclick = "showFormModal()">Request Booking</button>
             </div>
         </div>
 
@@ -171,7 +172,161 @@
             <div class="text-content">
                 <h1> Applying For Graduate Programs</h1>
                 <p> Random description for the appointment type and what it involves</p>
-                <button id = "request_booking">Request Booking</button>
+                <button id = "request_booking" onclick = "showFormModal()" >Request Booking</button>
+            </div>
+        </div>
+
+        <div id="booking-form-div">
+            <div class="booking-form">
+                <h1>Request Appointment</h1>
+                <span id = "close-form-modal" onclick = "closeFormModal()">&times</span>
+                    <form action="" id = "booking">
+                        <div class="booking-form-content">
+                
+                            <div class="form-element">
+                                <label for="date">Select a date:</label>
+                                <div class = "input-div" id = "input-div">
+                                    <input type="text" id="date-picker" placeholder = "Requested Date" required >
+                                    <i class="fa-solid fa-calendar-days" id = "calendar-icon"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-element">
+                                <label for="time">Select a time:</label>
+                                <div class = "input-div" id = "input-div">
+                                    <input type="text" id="time" name = "time" placeholder = "Time" required>
+                                    <i class="fa-solid fa-clock" id = "calendar-icon"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-element describe">
+                                <label for="describe">Describe your situation:</label>
+                                <div class = "input-div">
+                                    <textarea name="describe" id="describe" required></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-element" id = "upload-stuff">
+                                <label for="upload-files" style = "width: 100%;">Upload Files</label>
+                                <div class="button-wrap">
+                                    <label class = "upload-button" for = "upload-file"> Add Files &ensp;<i class="fa-solid fa-cloud-arrow-up"></i></label>
+                                    <input type="file" id="upload-file" name="filename" multiple> 
+                                </div>
+                                <div id="file-list"></div>
+                            </div>
+
+
+                            <div class="form-element">
+                                <span class = "separator"></span>
+                            </div>
+
+                            <div class="form-element" id = "submit-div">
+                                <button type="submit" value = "Submit" id = "submit" >Send Request </button>
+                            </div>
+
+
+                            <div class="time-lists-div" id = "time-modal">
+                                <div class="time-list">
+                                    <h2>Select a time:</h2>
+
+                                    <div class="timeslots">
+                                        <div class = "time">
+                                        <input type="radio" id = "slot-9" name = "timeslot" value = "9:00">
+                                        <label for="slot-9">9:00 </label>
+                                        </div>
+
+                                        <div class = "time">
+                                        <input type="radio" id = "slot-93" name = "timeslot" value = "9:30">
+                                        <label for="slot-93">9:30</label>
+                                        </div>
+
+                                        <div class = "time">
+                                        <input type="radio" id = "slot-10" name = "timeslot" value = "10:00">
+                                        <label for="slot-10">10:00</label>
+                                        </div>
+
+                                        <div class = "time">
+                                        <input type="radio" id = "slot-103" name = "timeslot" value = "10:30">
+                                        <label for="slot-103">10:30</label>
+                                        </div>
+
+                                        <div class = "time">
+                                        <input type="radio" id = "slot-11" name = "timeslot" value = "11:00">
+                                        <label for="slot-11">11:00</label>
+                                        </div>
+
+                                        <div class = "time">
+                                        <input type="radio" id = "slot-113" name = "timeslot" value = "11:30">
+                                        <label for="slot-113">11:30</label>
+                                        </div>
+
+                                        <div class = "time">
+                                        <input type="radio" id = "slot-12" name = "timeslot" value = "12:00">
+                                        <label for="slot-12">12:00</label>
+                                        </div>
+
+                                        <div class = "time">
+                                        <input type="radio" id = "slot-123" name = "timeslot" value = "12:30">
+                                        <label for="slot-123">12:30</label>
+                                        </div>
+
+                                        <div class = "time">
+                                        <input type="radio" id = "slot-13" name = "timeslot" value = "13:00">
+                                        <label for="slot-13">13:00</label>
+                                        </div>
+
+                                        <div class = "time">
+                                        <input type="radio" id = "slot-133" name = "timeslot" value = "13:30">
+                                        <label for="slot-133">13:30</label>
+                                        </div>
+
+                                        <div class = "time">
+                                        <input type="radio" id = "slot-14" name = "timeslot" value = "14:00">
+                                        <label for="slot-14">14:00</label>
+                                        </div>
+
+                                        <div class = "time">
+                                        <input type="radio" id = "slot-143" name = "timeslot" value = "14:30">
+                                        <label for="slot-143">14:30</label>
+                                        </div>
+
+                                        <div class = "time">
+                                        <input type="radio" id = "slot-15" name = "timeslot" value = "15:00">
+                                        <label for="slot-15">15:00</label>
+                                        </div>
+
+                                        <div class = "time">
+                                        <input type="radio" id = "slot-153" name = "timeslot" value = "15:30">
+                                        <label for="slot-153">15:30</label>
+                                        </div>
+
+                                        <div class = "time">
+                                        <input type="radio" id = "slot-16" name = "timeslot" value = "16:00">
+                                        <label for="slot-16">16:00</label>
+                                        </div>
+
+                                        <div class = "time">
+                                        <input type="radio" id = "slot-163" name = "timeslot" value = "16:30">
+                                        <label for="slot-163">16:30</label>
+                                        </div>
+
+                                        <div class = "time">
+                                        <input type="radio" id = "slot-17" name = "timeslot" value = "17:00">
+                                        <label for="slot-17">17:00</label>
+                                        </div>
+                                        
+                                        <span id="close-modal">&times</span>
+
+                                        
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+            
             </div>
         </div>
     </div>
@@ -181,47 +336,9 @@
 
 <div class = "divider" style = "border-top: none; margin-top: 100px;"></div>
 
-<div class="booking-form">
-    <div class="booking-form-content">
-
-        <form action="" id = "booking">
-            <div class="form-element">
-                <label for="date">Select a date:</label>
-                <input type="date" id="date" name = "date">
-            </div>
-
-            <div class="form-element">
-                <label for="time">Select a time:</label>
-                <input type="text" id="time" name = "time">
-            </div>
-
-            <div class="form-element">
-                <label for="describe">Describe your situation:</label>
-                <textarea name="describe" id="describe"></textarea>
-            </div>
-
-            <div class="form-element" id = "upload-stuff">
-                <label for="upload-files" style = "width: 100%;">Upload Files</label>
-                <div class="button-wrap">
-                    <label class = "upload-button" for = "upload-file"> Add Files &ensp;<i class="fa-solid fa-cloud-arrow-up"></i></label>
-                    <input type="file" id="upload-file" name="filename" multiple> 
-                </div>
-                <div id="file-list"></div>
-            </div>
 
 
-            <div class="form-element">
-                <span class = "separator"></span>
-            </div>
 
-            <div class="form-element" id = "submit-div">
-                <button type="submit" value = "Submit" id = "submit" >Send</button>
-            </div>
-
-
-        </form>
-    </div>
-</div>
 
 
 <footer>
@@ -269,7 +386,9 @@
     </div>
 </footer>
 
-
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src = "../JS/Appointments.js"></script>
+<script src = "../JS/Queries.js"></script>
 </body>
 
 </html>
