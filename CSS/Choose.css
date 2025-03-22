@@ -10,20 +10,29 @@
 }
 
 .student-div {
-    border: 2px solid black;
     height: fit-content;
     width: 40%;
     border-radius: 30px;
-    background-color: white;
+    background-color: rgb(213, 221, 255);
+    background-image: linear-gradient(90deg, rgb(73, 84, 133), rgb(213, 221, 255));
 
+    transition: box-shadow 300ms ease-in-out;
+}
+
+.student-div:hover {
+    box-shadow: 0px 0px 8px white;
 }
 
 .business-div {
-    border: 2px solid black;
     width: 40%;
     border-radius: 30px;
-    background-color: white;
-    
+    background-image: linear-gradient(90deg,rgb(230, 255, 248), rgb(107, 175, 156) );
+    transition: box-shadow 300ms ease-in-out;
+}
+
+
+.business-div:hover {
+    box-shadow: 0px 0px 8px white;
 }
 
 
@@ -87,6 +96,7 @@
 .header h1{
     width: 100%;
     text-align: center;
+   
 }
 
 .header p {
@@ -102,33 +112,80 @@
 /* Student and Business Content */
 
 .student-content, .business-content {
-    padding: 20px;
+    padding: 15px;
     height: fit-content;
+    font-size: .9em;
+
 }
 .student-content, .business-content {
     text-align: center;
 }
 
+.text-content {
+    border: 2px solid white;
+    padding: 15px;
+    
+    background-color: white;
+    border-radius: 20px;
+}
+
 .student-content i, .business-content i {
     font-size: 6em;
+    color:#00244D;
+}
+
+.line {
+    display: block;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.student-content p, .business-content p {
+    font-size: .8em;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: rgba(0, 0, 0, 0.518);
 }
 
 .student-content button i, .business-content button i {
     font-size: 1.3em;
     margin-left: 15px;
+    color: white;
 }
 
 .student-content button, .business-content button {
-    height: 40px;
+    height: 50px;
     padding: 5px 15px;
     border: 2px solid white;
     font-family: "Gordita Medium", serif;
     border-radius: 10px;
     background-color: #1f7e34;
     color: white;
+    margin-bottom: 10px;
+    width: 100%;
+
+    transition: background-color 300ms ease-in-out;
    
 }
 
+
 .business-content button {
     background-color: #00244D;
+}
+
+
+.student-content button:hover {
+    background-color: #2db74b;;
+}
+
+.business-content button:hover {
+    background-color: #094a95;
+}
+
+.student-content button:focus {
+    background-color: #003e0d;
+}
+
+.business-content button:focus {
+    background-color: #0d1e32;
 }

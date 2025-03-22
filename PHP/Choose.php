@@ -20,7 +20,7 @@
 <div class="body-content">
 
     
-        <button class="back">
+        <button class="back" onclick = "history.back()">
             <i class="fa-solid fa-arrow-left"></i>
         </button>
     
@@ -36,34 +36,50 @@
 
     <div class="student-div">
         <div class="student-content">
-            <h1>Students and Graduates</h1>
-            <h3>Careers Connect</h3>
+            <div class="text-content">
+                <h1>Students and Graduates</h1>
+                <h3>Careers Connect</h3>
 
-            <div class="icon">
-                <i class="fa-solid fa-user-graduate"></i>
+                <div class="icon">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+
+                <p>An easy to use online system used to: Book an appointment, Find out about job opportunities, 
+                    Book a place at an event, and Ask a question.</p>
+            
+                <span class = "line"></span>
+                    <div class="buttons">
+                <button id = "student-sign" onclick = "location.href = 'Student_Login.php'">Student Sign In<i class="fa-solid fa-right-to-bracket"></i></button><br>
+                <button id = "graduate-sign" onclick = "location.href = 'Graduate_Login.php'">Graduate Sign In and Registration<i class="fa-solid fa-right-to-bracket"></i></button>
+            </div>
             </div>
 
-            <p>An easy to use online system used to: Book an appointment, Find out about job opportunities, 
-                Book a place at an event, and Ask a question.</p>
-
-            <button id = "student-sign">Student Sign In<i class="fa-solid fa-right-to-bracket"></i></button>
-            <button id = "graduate-sign">Graduate Sign In and Registration<i class="fa-solid fa-right-to-bracket"></i></button>
+           
         </div>
     </div>
 
     <div class="business-div">
         <div class="business-content">
-            <h1>Employers and Organizations</h1>
-            <h3>Careers Connect</h3>
+            <div class="text-content">
+                <h1>Employers and Organizations</h1>
+                <h3>Employee Connect</h3>
 
-            <div class="icon">
-                <i class="fa-solid fa-briefcase"></i>
+                <div class="icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+
+                
+                <p>Register your organisation with us and enhance your organisation's profile and visibility 
+                    within the Institution community.</p>
+                
+                <span class = "line"></span>
+                <div class="buttons">
+                     <button id = "organization-sign" onclick = "location.href = 'Organization_Login.php'">Organization Sign In<i class="fa-solid fa-right-to-bracket"></i></button>
+                </div>   
+                <br><br><br>
             </div>
 
-            <p>Register your organisation with us and enhance your organisation's profile and visibility 
-                within the Institution community.</p>
-
-            <button id = "organization-sign">Organization Sign In<i class="fa-solid fa-right-to-bracket"></i></button>
+           
         </div>
     </div>
 

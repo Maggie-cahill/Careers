@@ -1,0 +1,190 @@
+.body-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+#login-box {
+    border: 5px double rgb(255, 216, 45);
+    border-radius: 10px;
+    font-size: .8em;
+    width: 350px;
+    background-color: #135066;
+    /* background-image: linear-gradient(120deg, #135066, #4794af); */
+    background-color: white;
+    padding: 30px;
+    padding-top: 10px;
+  
+    box-shadow: 0px 0px 5px rgba(0,0,0,.3);
+}
+
+#login-box h1 {
+    font-size: 2.5em;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    font-family: "Halyard Display SemiBold", serif;
+    text-align: center;
+    color: teal;
+}
+
+#login-box h1:nth-of-type(2) {
+    font-size: 2em;
+    margin-bottom: 30px;
+    font-style: normal;
+    text-align: center;
+    color: #135066;
+
+}
+
+#createAccount {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+}
+
+#labelCreateAccount {
+    margin-top: 15px;
+}
+
+
+.login {
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    margin-left: 0;
+    padding: 0;
+}
+
+.icon {
+    font-size: 3em;
+    text-align: center;
+}
+
+
+.login:hover {
+    background-color: white;
+}
+
+#login h1 {
+    margin-top: 0;
+}
+
+
+#loginButton {
+    height: 35px;
+    width: 200px; 
+    font-size:20px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    border-radius: 20px;
+
+
+    background-color: #135066;
+    color: white;
+    font-family: "Gordita Medium", serif;
+    padding: 20px;
+    border: 2px solid white;
+    transition: background-color 300ms ease-in-out;
+}
+
+#loginButton:hover {
+    background-color: #49a3c4;
+}
+
+#loginButton:focus {
+    background-color: #8ed8f3;
+}
+
+
+#login_response {
+    margin-top: 25px;
+    color: rgb(225, 18, 18);
+}
+
+.form-element {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.form-element label {
+    width: 100%;
+    font-family: "Gordita Light", serif;
+    font-size: 1em;
+    color: black;
+    margin-left: 10px;
+}
+
+.form-element input {
+    border-radius: 20px;
+    height: 40px;
+    width: 80%;
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.382);
+    padding-left: 50px;
+    font-family: "ITC Avant Garde Gothic", serif;;
+}
+
+.header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    margin-top: 0;
+    min-width: 300px;
+}
+
+.image-div {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-radius: 10px;
+    border: 5px double teal;
+    width: 80%;
+    
+}
+
+img {
+    width: 100%;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.input-div {
+    position: relative;
+    width: 100%;
+    height: fit-content
+}
+
+.icons {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: black
+}
+
+.divider {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border-top: none;
+    height: 0px;
+}
+
+
