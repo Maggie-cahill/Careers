@@ -25,13 +25,13 @@
                 <img src="../Images/Final_Logo.png" alt="">
             </div>
         </div>
-<div id="login-box">
+<div id="login-box" style = "border-color: #B1D5E6;">
         
     <div class="login">
         <div class="icon">
-                <i class="fa-solid fa-user-graduate"></i>
-            </div>
-        <h1>Student Portal</h1>
+            <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <h1>Graduate Portal</h1>
         <h1> Sign In </h1>
         <form id = "login" onsubmit = "loginUser()">
            

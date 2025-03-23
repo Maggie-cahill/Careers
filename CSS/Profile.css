@@ -1,0 +1,183 @@
+.body-content {
+    width: 100%;
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.side-bar-content {
+    border-left: none;
+    width: 30%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+.user {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    padding-bottom: 40px;
+    padding-top: 30px;
+    background-color: #00244D;
+    border-top-right-radius: 18px;
+    color: white;
+    border-bottom: 5px solid white;
+}
+
+.user h1 {
+    font-size: 1.5em;
+}
+
+.user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.side-bar-content {
+    background-color: #B1D5E6;
+    color: white;
+
+}
+
+.side-bar-content ul {
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+.side-bar-content ul li {
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.list-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    font-size: .7em;
+}
+
+.side-bar-content ul li i {
+    font-size: 2.5em;
+}
+
+
+/* Profile Descriptions Your Account */
+
+.profile-descriptions {
+    width: 60%;
+    padding: 30px;
+}
+
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-descriptions h1 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.header img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.258);
+}
+
+.header button {
+    height: 70px;
+    padding: 20px;
+    display: flex;
+    font-size: 1.5em;
+    align-items: center;
+    gap: 10px;
+    border-radius: 40px;
+    font-family: "Gordita Medium", serif;
+    background-color: #ECD23E;
+    color: white;
+    border: none;
+    margin-right: 30px;
+}
+
+.line {
+    display: block;
+    border: 1px solid black;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.user-details h3 {
+    font-size: 1.7em;
+}
+
+.name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.email {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.user-details button {
+    margin-right: 150px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    border-radius: 40px;
+    font-size: 1.1em;
+    width: 110px;
+    font-family: "Gordita Medium", serif;;
+    border: none;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.211);
+}
+
+
+.security h3 {
+    font-size: 1.7em;
+}
+
+
+.password-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    font-family: "ITC Avant Garde Gothic", serif;
+}
+
+.password-div button {
+    margin-right: 150px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    border-radius: 40px;
+    font-size: 1.1em;
+    width: 110px;
+    font-family: "Gordita Medium", serif;;
+    border: none;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.211);
+}

@@ -7,6 +7,7 @@
 
 <link rel="stylesheet" href="../CSS/General_Styles.css">
 <link rel="stylesheet" href="../CSS/Student_Login.css">
+<link rel="stylesheet" href="../CSS/Organization_Login.css">
 
 
 
@@ -25,19 +26,19 @@
                 <img src="../Images/Final_Logo.png" alt="">
             </div>
         </div>
-<div id="login-box">
+<div id="login-box" style = "border-color:rgb(4, 19, 128);">
         
     <div class="login">
         <div class="icon">
-                <i class="fa-solid fa-user-graduate"></i>
-            </div>
-        <h1>Student Portal</h1>
+            <i class="fa-solid fa-briefcase"></i>
+        </div>
+        <h1>Organization Portal</h1>
         <h1> Sign In </h1>
         <form id = "login" onsubmit = "loginUser()">
            
 
              <div class="form-element">
-                <label class="form-label" for="login_username">Student Email: </label>
+                <label class="form-label" for="login_username">Email: </label>
                 <div class="input-div">
                     <input class = "form-control" type="text" id = "login_username" name = "login_username" required>
                     <div class="icons">
@@ -55,6 +56,9 @@
                         <i class="fa-solid fa-lock"></i>
                     </div>
                 </div>
+                <a href="Forgot_Password.php" id = "forgot-link">
+                    <label for="login_password" id = "forgot">Forgot Password</label>
+                </a>
             </div>
 
 
@@ -68,12 +72,27 @@
 
             <div id="login_response"></div>
             </div>
+</div>
+
+<div class="create-account">
+    <div class="label">  
+        <div class="class">
+        <span class="short-line"></span>
+        </div>
+        
+        <label for="createAccount" id = "labelCreateAccount">Register Business at ATU Careers</label>
+        
+        <div class="class">
+        <span class="short-line"></span>
+        </div>
     </div>
+    <button id = "createAccount" name = "createAccount" onclick = "window.location = 'Create_User.php'">Register Account </button>
+</div>
 
 </div>
 </div>
 
-<div class = "divider"></div>
+
 
 
 

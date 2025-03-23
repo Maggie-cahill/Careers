@@ -52,11 +52,12 @@
     justify-content: center;
     align-items: center;
 
-    transition: background-color 300ms ease-in-out;
+    transition: background-color 300ms ease-in-out, font-size 300ms ease-in-out, padding 300ms ease-in-out;
 }
 
 .back:hover {
-    background-color: #ccb324;
+    font-size: 3.5em;
+    padding: 37px;
 }
 
 .back:focus {
@@ -87,7 +88,7 @@
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     box-shadow: 0px 0px 3px white;
-    width: 400px;
+    width: 250px;
     padding: 25px;
     background-color: rgba(255, 255, 255, 0.297);
 
