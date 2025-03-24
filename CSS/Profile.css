@@ -7,13 +7,26 @@
     margin-top: 40px;
 }
 
+#response-div {
+    width: 60%;
+}
+
 .side-bar-content {
     border-left: none;
     width: 30%;
+    min-height: 800px;
+    max-height: 1000px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    background-color: #B1D5E6;
+    color: white;
 }
 
+
+
+.divider {
+    margin-top: 200px;
+}
 
 .user {
     display: flex;
@@ -39,11 +52,7 @@
     border-radius: 50%;
 }
 
-.side-bar-content {
-    background-color: #B1D5E6;
-    color: white;
 
-}
 
 .side-bar-content ul {
     list-style-type: none;
@@ -71,7 +80,7 @@
 /* Profile Descriptions Your Account */
 
 .profile-descriptions {
-    width: 60%;
+    width: 100%;
     padding: 30px;
 }
 
@@ -84,7 +93,7 @@
 }
 
 .profile-descriptions h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 40px;
 }
 
@@ -108,6 +117,13 @@
     color: white;
     border: none;
     margin-right: 30px;
+
+    transition: background-color 300ms ease-in-out;
+}
+
+
+.header button:hover {
+    background-color: #bea517;
 }
 
 .line {
@@ -115,7 +131,7 @@
     border: 1px solid black;
     width: 100%;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .user-details h3 {
@@ -150,7 +166,22 @@
     border: none;
     background-color: white;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.211);
+
+    transition: background-color 300ms ease-in-out;
 }
+
+.security button {
+    transition: background-color 300ms ease-in-out;
+}
+
+.user-details button:hover {
+    background-color: rgb(225, 225, 225);
+}
+
+.security button:hover {
+    background-color: rgb(225, 225, 225);
+}
+
 
 
 .security h3 {
@@ -181,3 +212,461 @@
     background-color: white;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.211);
 }
+
+/* Profile and CV Descriptions */
+
+
+.profile-and-cv {
+    width: 100%;
+    padding: 30px;
+    height: 1000px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.profile-and-cv::-webkit-scrollbar {
+    width: 5px; /* Width of the vertical scrollbar */
+    height: 4px; /* Height of the horizontal scrollbar */
+    color: white;
+    transition: opacity 300ms ease-in-out;
+}
+
+
+
+/* The track (background of the scrollbar) */
+.profile-and-cv::-webkit-scrollbar-track {
+    background: #f1f1f100; /* Light gray */
+    border-radius: 10px; /* Rounded corners */
+    margin: 20px;
+    margin-left: 10px;
+    display: block;
+}
+
+.profile-and-cv::-webkit-scrollbar-thumb {
+    background: teal; /* Blue color */
+    border-radius: 10px;
+    margin-left: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.profile-and-cv::-webkit-scrollbar-thumb {
+    height: 5px; /* Set a shorter height */
+    background: teal; /* Optional styling */
+}
+
+.profile-and-cv::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(0, 60, 60); /* Darker blue on hover */
+}
+
+.profile-and-cv h1 {
+    font-size:3em;
+}
+
+.header-details {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.header-details button {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    border-radius: 40px;
+    font-size: 1.1em;
+    width: 110px;
+    font-family: "Gordita Medium", serif;;
+    border: none;
+    background-color: white;
+    height: 50px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.211);
+    transition: background-color 300ms ease-in-out;
+}
+
+.header-details button:hover {
+    background-color: rgb(232, 232, 232);
+}
+
+.header-details h3 {
+    font-size: 2em;
+}
+
+
+.personal-detail label, .education-detail label {
+    font-family: "Gordita Medium", serif;
+    font-size: 1.2em;
+}
+
+.skills-detail label {
+    font-family: "Gordita Medium", serif;
+    font-size: 1.5em;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.skills-detail {
+    display: flex;
+    row-gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.skills-detail:nth-of-type(2) {
+    margin-top: 70px;
+}
+
+.personal-details, .education-details{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.personal-detail, .education-detail {
+    width: 40%;
+}
+
+.personal-detail:nth-of-type(2), .personal-detail:nth-of-type(4) {
+    width: 50%;
+}
+
+
+.hard-skills, .soft-skills, .interests {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    width: 70%;
+    min-width: 500px;
+}
+
+.hard-skills button, .soft-skills button, .interests button, .cv-details button, .links button, .type button {
+    border-radius: 15px;
+    font-size: 1em;
+    padding: 10px;
+    font-family: "ITC Avant Garde Gothic", serif;
+    background-color: white;
+    border: none;
+    color: rgb(51, 51, 51);
+}
+
+.hard-skills button {
+    background-color: rgb(246, 255, 250); 
+    box-shadow: 2px 2px 3px rgba(0, 81, 16, 0.262);
+}
+
+.soft-skills button {
+    background-color: rgb(255, 246, 246); 
+    box-shadow:  2px 2px 3px rgba(81, 0, 0, 0.262);
+}
+
+.interests button {
+    background-color: #fff9da;
+    box-shadow: 2px 2px 3px #c8ac1e;
+}
+
+.cv-details button {
+    box-shadow:  0px 0px 5px rgba(0, 0, 0, 0.262);
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 25px;
+    background-color: #f2f2f26a;
+}
+
+
+.link-details button {
+    background-color: #e7fffd;
+    box-shadow: 2px 2px 3px #84e2d9;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.interests {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.fields-details .line, .skills-details .line{
+    margin-top: 80px;
+}
+
+.link-details {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.links label, .type label {
+    width: 100%;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-family: "Gordita Medium", serif;;
+}
+
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 60%;
+    
+}
+
+.links button {
+    max-width: 500px;
+    padding: 10px 20px;
+    text-align: left;
+    display: flex;
+    overflow: hidden;
+    border-radius: 30px;
+
+}
+
+
+.text {
+    overflow-x: hidden;
+    height: fit-content;
+    margin: 0;
+    padding: 10px;
+    transition: overflow 700ms ease-in-out;
+
+}
+
+.text p {
+    margin: 0;
+}
+
+.links button:hover > .text {
+    overflow-x: scroll;
+}
+
+.text::-webkit-scrollbar {
+    width: 5px; /* Width of the vertical scrollbar */
+    height: 4px; /* Height of the horizontal scrollbar */
+    color: white;
+    transition: opacity 300ms ease-in-out;
+}
+
+
+
+/* The track (background of the scrollbar) */
+.text::-webkit-scrollbar-track {
+    background: #f1f1f100; /* Light gray */
+    border-radius: 10px; /* Rounded corners */
+    margin: 20px;
+    margin-left: 10px;
+    display: block;
+}
+
+.text::-webkit-scrollbar-thumb {
+    background: #007bff; /* Blue color */
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.text::-webkit-scrollbar-thumb {
+    height: 30px; /* Set a shorter height */
+    background: #007bff; /* Optional styling */
+}
+
+.text::-webkit-scrollbar-thumb:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+
+
+
+
+
+.type {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 25%;
+}
+
+.type button {
+    width: 100%;
+    background-color: #cdeeffb1;
+    box-shadow: 2px 2px 3px #52b5e2e7;
+}
+
+
+.line.end {
+    margin-top: 120px;
+}
+
+
+.form-content .myFile {
+    background-color: blue;
+}
+
+
+input[type="file"] {
+    position: absolute;
+    z-index: -1;
+    top: 10px;
+    left: 8px;
+    font-size: 17px;
+    color: #b8b8b8;
+    max-width: 200px;
+  }
+
+  .button-wrap {
+    position: relative;
+    width: fit-content;
+  }
+
+  .upload-button {
+    display: inline-block;
+    padding: 12px 18px;
+    cursor: pointer;
+    max-width: 200px;
+    border-radius: 5px;
+    background-color: #2325b3;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    transition: box-shadow 300ms ease-in-out, background-color 300ms ease-in-out;
+
+  }
+
+  .upload-button:hover {
+    background-color: #090a7b; /* Slightly darker green */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+}
+
+.button-wrap label {
+    font-family: "Gordita Medium", serif;
+}
+
+
+#upload-stuff {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#upload-stuff  label {
+    max-width: 200px;
+}
+
+.listedFiles  {
+    list-style-type: none;
+}
+
+.listedFiles li {
+    margin-bottom: 15px;
+    font-family: "ITC Avant Garde Gothic", serif;
+    font-style: italic;
+}
+
+.separator {
+    display: block;
+    width: 100%;
+    border-bottom: 2px dashed rgb(0, 18, 138);
+}
+
+
+
+/* Saved Jobs Styling */
+
+
+.saved-jobs {
+    width: 100%;
+    padding: 30px;
+}
+
+.saved-jobs h1 {
+    font-size:3em;
+}
+
+
+.job-listing {
+    border: 0px solid black;
+    border-radius: 20px;
+    padding: 15px;
+    position: relative;
+    background-color: #ffffff2b;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.229);
+}
+
+.company-title {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    font-family: "Gordita Light", serif;
+    font-size: .6em;
+    color: rgba(123, 123, 123, 0.241);
+}
+
+.company-title img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid white;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.266);
+}
+
+.job-listing h2 {
+    font-size: 1.2em;
+}
+
+.job-listing p {
+    font-size: .6em;
+    font-family: "ITC Avant Garde Gothic", serif;
+    color: rgba(0, 0, 0, 0.64);
+}
+
+.job-listing .buttons {
+    position: absolute;
+    display: flex;
+    gap: 15px;
+    bottom: 10px;
+    right: 15px;
+
+    transition: background-color 300ms ease-in-out;
+}
+
+.job-listing button {
+    border: 2px solid teal;
+    background-color: teal;
+    color: white;
+    border-radius: 5px;
+    padding: 7px;
+    display: flex;
+    gap: 10px;
+    font-family: "Gordita Medium", serif;
+    color: teal;
+    align-items: center;
+    background-color: white;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.115);
+
+    transition: color 300ms ease-in-out;
+}
+
+
+.job-listing button:hover {
+    background-color: teal;
+}
+
+.job-listing button:hover > i, .job-listing button:hover {
+    color: white;
+}
+
+.job-listing button:focus {
+    background-color: rgb(7, 87, 87);
+    border-color: white;
+}
+
+
+
