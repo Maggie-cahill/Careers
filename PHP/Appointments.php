@@ -22,7 +22,10 @@
 
         <a href = "Index.php">
         <div class="logo">
-            <img src="../Images/Final_Logo.png" alt="ATU Career Path Logo">
+            <video autoplay loop muted playsinline id = "logo_animation">
+                <source src="../Images/AnimatedLogo.webm" type="video/webm">
+                <source src="../Images/Comp 2_1.mov" type="video/quicktime">
+            </video>
         </div>
         </a>
 
@@ -47,11 +50,12 @@
     <div class="subtext">
         <h1> Let's Start a Conversation!</h1>
         <p>
-            "questions and concerns" is correct and usable in written English. You can use it to express that 
-            something raises both questions and concerns--for example: The proposed changes to the health care 
-            system have raised a number of questions and concerns. "questions and concerns" is correct and usable 
-            in written English. You can use it to express that something raises both questions and concerns--for example: 
-            The proposed changes to the health care system have raised a number of questions and concerns.
+        Our appointments page is your gateway to personalized career support, offering a streamlined way for 
+        students to book sessions with professional advisors across multiple categories. Whether you need expert 
+        advice on crafting an impactful CV, preparing for interviews, exploring graduate programs, or finding 
+        part-time work and current vacancies, our team is here to guide you every step of the way. With just 
+        a few clicks, students can schedule a session to address their specific needs and gain tailored insights 
+        that help them navigate their career journey confidently.
         </p>
     </div>
 
@@ -114,64 +118,67 @@
         </div>
         </div>
         <div class="appointment-element">
-            <img src="../Images/Office.jpg" alt="">
+            <img src="../Images/CV_Check.JPG" alt="">
             <div class="text-content">
                 <h1> CV Check </h1>
-                <p> Random description for the appointment type and what it involves</p>
+                <p>Get tailored feedback to refine and enhance your CV for job applications.</p>
                 <button id = "request_booking" onclick = "showFormModal()">Request Booking</button>
             </div>
         </div>
 
         <div class="appointment-element">
-            <img src="../Images/Office.jpg" alt="">
+            <img src="../Images/Career_Advice.jpg" alt="">
             <div class="text-content">
                 <h1> Career Advice </h1>
-                <p> Random description for the appointment type and what it involves</p>
+                <p> Receive personalized guidance from expert advisors to explore career options, set goals, and navigate 
+                    challenges in your professional journey.</p>
                 <button id = "request_booking" onclick = "showFormModal()">Request Booking</button>
             </div>
         </div>
 
         <div class="appointment-element">
-            <img src="../Images/Office.jpg" alt="">
+            <img src="../Images/Interview.JPG" alt="">
             <div class="text-content">
                 <h1> Interview Prep </h1>
-                <p> Random description for the appointment type and what it involves</p>
+                <p> Get professional tips and strategies to boost your confidence and excel in interviews.</p>
                 <button id = "request_booking" onclick = "showFormModal()">Request Booking</button>
             </div>
         </div>
 
         <div class="appointment-element">
-            <img src="../Images/Office.jpg" alt="">
+            <img src="../Images/Vacancy.jpg" alt="">
             <div class="text-content">
                 <h1> Vacancies</h1>
-                <p> Random description for the appointment type and what it involves</p>
+                <p> Explore current job opportunities tailored to your skills and aspirations.</p>
                 <button id = "request_booking" onclick = "showFormModal()">Request Booking</button>
             </div>
         </div>
 
         <div class="appointment-element">
-            <img src="../Images/Office.jpg" alt="">
+            <img src="../Images/Job_Application.jpg" alt="">
             <div class="text-content">
                 <h1> Applying For Jobs</h1>
-                <p> Random description for the appointment type and what it involves</p>
+                <p> Get expert support to craft strong applications and confidently apply for your desired roles.</p>
                 <button id = "request_booking" onclick = "showFormModal()">Request Booking</button>
             </div>
         </div>
 
         <div class="appointment-element">
-            <img src="../Images/Office.jpg" alt="">
+            <img src="../Images/Part_Time.jpg" alt="">
             <div class="text-content">
                 <h1>  Looking For Part Time Work </h1>
-                <p> Random description for the appointment type and what it involves</p>
+                <p> Receive guidance on finding part-time opportunities that align with your schedule and skills.</p>
                 <button id = "request_booking" onclick = "showFormModal()">Request Booking</button>
             </div>
         </div>
 
-        <div class="appointment-element">
-            <img src="../Images/Office.jpg" alt="">
+        <div class="appointment-element graduate">
+            <div class="image-div">
+                <img src="../Images/Graduate.jpg" alt="">
+            </div>
             <div class="text-content">
                 <h1> Applying For Graduate Programs</h1>
-                <p> Random description for the appointment type and what it involves</p>
+                <p>Get expert assistance to navigate graduate program applications and stand out as a candidate.</p>
                 <button id = "request_booking" onclick = "showFormModal()" >Request Booking</button>
             </div>
         </div>
@@ -389,6 +396,7 @@
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src = "../JS/Appointments.js"></script>
 <script src = "../JS/Queries.js"></script>
+<script src = "../JS/Utils.js"></script>
 </body>
 
 </html>

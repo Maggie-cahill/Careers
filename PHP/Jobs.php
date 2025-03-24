@@ -21,7 +21,10 @@
 
         <a href = "Index.php">
         <div class="logo">
-            <img src="../Images/Final_Logo.png" alt="ATU Career Path Logo">
+            <video autoplay loop muted playsinline id = "logo_animation">
+                <source src="../Images/AnimatedLogo.webm" type="video/webm">
+                <source src="../Images/Comp 2_1.mov" type="video/quicktime">
+            </video>
         </div>
         </a>
 
@@ -84,7 +87,7 @@
     <div id="job-list">
         <div class="job-listing">
             <div class="company-title">
-                <img src="../Images/Office.jpg" alt="">
+                <img src="../Images/Company_Logo.png" alt="">
                 <h4> Company Name</h4>
             </div>
             <h2>Software Developer Intern</h2>
@@ -100,7 +103,39 @@
 
         <div class="job-listing">
             <div class="company-title">
-                <img src="../Images/Office.jpg" alt="">
+                <img src="../Images/Company_Logo.png" alt="">
+                <h4> Company Name</h4>
+            </div>
+            <h2>Software Developer Intern</h2>
+            <p> Type of Position | Location</p>
+            <p> $40,000</p>
+            <p> 45 days to apply</p>
+
+            <form action="">
+                <button><i class="fa-solid fa-bookmark"></i></button>
+            </form>
+            <br><br>
+        </div>
+
+        <div class="job-listing">
+            <div class="company-title">
+                <img src="../Images/Company_Logo.png" alt="">
+                <h4> Company Name</h4>
+            </div>
+            <h2>Software Developer Intern</h2>
+            <p> Type of Position | Location</p>
+            <p> $40,000</p>
+            <p> 45 days to apply</p>
+
+            <form action="">
+                <button><i class="fa-solid fa-bookmark"></i></button>
+            </form>
+            <br><br>
+        </div>
+
+        <div class="job-listing">
+            <div class="company-title">
+                <img src="../Images/Company_Logo.png" alt="">
                 <h4> Company Name</h4>
             </div>
             <h2>Software Developer Intern</h2>
@@ -117,7 +152,7 @@
 
     <div id="job-information">
         <div class="company-header">
-            <img src="../Images/Office.jpg" alt="">
+            <img src="../Images/Company_Logo.png" alt="">
             <h1> Company Name</h1>
         </div>
 
@@ -225,5 +260,5 @@
 
 
 </body>
-
+<script src = "../JS/Utils.js"></script>
 </html>

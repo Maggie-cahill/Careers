@@ -33,7 +33,7 @@
             </div>
         <h1>Student Portal</h1>
         <h1> Sign In </h1>
-        <form id = "login" onsubmit = "loginUser()">
+        <div id = "login" >
            
 
              <div class="form-element">
@@ -59,12 +59,12 @@
 
 
             <div class="buttons">
-                <a href="Recipes.php" style = "text-decoration: none;">
-                 <button type="submit" value = "Login" id = "loginButton" class="button-container btn btn-dark mt-5">Sign In</button>
+                <a href="Profile_Signed_In.php" style = "text-decoration: none;" >
+                 <button type="submit" value = "Login" id = "loginButton" class="button-container btn btn-dark mt-5"  >Sign In</button>
                  </a>
             </div>
 
-            </form>
+            </div>
 
             <div id="login_response"></div>
             </div>

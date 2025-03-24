@@ -21,7 +21,10 @@
 
         <a href = "Index.php">
         <div class="logo">
-            <img src="../Images/Final_Logo.png" alt="ATU Career Path Logo">
+            <video autoplay loop muted playsinline id = "logo_animation">
+                <source src="../Images/AnimatedLogo.webm" type="video/webm">
+                <source src="../Images/Comp 2_1.mov" type="video/quicktime">
+            </video>
         </div>
         </a>
 
@@ -148,4 +151,5 @@
 </body>
 
 <script src="../JS/Queries.js" defer></script>
+<script src = "../JS/Utils.js"></script>
 </html>

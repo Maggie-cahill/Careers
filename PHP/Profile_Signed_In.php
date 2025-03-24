@@ -32,7 +32,7 @@
             <a href = "Queries.php"><li style = "font-size: 1.8em;"> <i class="fa-solid fa-envelope"></i> </li></a>
             <a href = "Jobs.php"><li> Jobs </li></a>
             <a href = "Appointments.php"><li> Appointments </li></a>
-            <a href = "Login.php"><li> <button class="login"> Sign In </button></li></a>
+            <a href = "Profile_Signed_In.php"><li> <button class="profile"> M </button></li></a>
         </ul>
     </div>
     
@@ -42,9 +42,9 @@
     
     <div class="side-bar-content">
         <div class="user">
-            <button class="profile"> M </button>
+        <button class="profile"> M </button>
             <h1>G00423830</h1>
-        </di>
+        </div>
 
         <ul>
             <li>

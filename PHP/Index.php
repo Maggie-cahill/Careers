@@ -21,7 +21,10 @@
 
         <a href = "Index.php">
         <div class="logo">
-            <img src="../Images/Final_Logo.png" alt="ATU Career Path Logo">
+            <video autoplay loop muted playsinline id = "logo_animation">
+                <source src="../Images/AnimatedLogo.webm" type="video/webm">
+                <source src="../Images/Comp 2_1.mov" type="video/quicktime">
+            </video>
         </div>
         </a>
 
@@ -36,6 +39,18 @@
 </nav>
 
 <div class="search">
+
+    <div class="videoDiv">
+        <div class="backdrop"></div>
+        <video id="video" width="100%" height="auto" autoplay muted loop>
+            <source src="../Images/Video.mp4" type="video/mp4">
+            <source src="" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+        
+
+    </div>
+
 
     <div class="box">
         <h1>Pursue Your Aspirations and Find Your Future!</h1>
@@ -55,18 +70,17 @@
 
     </div>
 
-    <div class="backdrop"></div>
     <div class="transparent"></div>
   
 </div>
 
-<div class = "divider"></div>
+<div class = "divider" style = "margin-top: 70px;"></div>
 
 <div class="body-content">
 
     <div class="subsection">
         <div class="image-outline">
-            <img src="../Images/Office.jpg" alt="ATU Career Path Logo">
+            <img src="../Images/Handshake.png" alt="ATU Career Path Logo">
         </div>
 
         <div class="text-content">
@@ -76,11 +90,15 @@
                 <span></span>
             </div>
 
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                sunt in culpa qui officia deserunt mollit anim id est laborum. 
+            <p>
+                We are a dynamic platform designed to bridge the gap between ambition and opportunity 
+                for both students and employers. ATU students can leverage this resource to discover career paths, connect 
+                with potential employers, and build meaningful professional relationships that align with their aspirations.
+                At the same time, companies can use the platform to engage with emerging talent from ATU—motivated and 
+                forward-thinking students eager to make their mark in the professional world. This mutually beneficial 
+                ecosystem fosters collaboration, innovation, and growth, ensuring that ATU students have a launchpad for 
+                success while companies gain access to a pool of skilled and driven individuals ready to contribute. It's 
+                a win-win for students and employers alike.
             </p>
         </div>
     </div>
@@ -93,22 +111,24 @@
                 <span></span>
             </div>
 
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                sunt in culpa qui officia deserunt mollit anim id est laborum. 
+            <p> Students can conveniently book appointments through our website to access a wide array of career support 
+                services tailored to their professional journey. Whether it's perfecting their CV, preparing for upcoming 
+                interviews, exploring part-time work opportunities, or diving into graduate programs, they can find all 
+                the guidance they need. The platform also allows students to browse current vacancies, gain insights into 
+                career advice, and develop the skills required to stand out in competitive job markets. With just a few clicks, 
+                ATU students can connect with career advisors who are dedicated to empowering them to achieve their goals and 
+                navigate their career paths confidently.
             </p>
         </div>
 
         <div class="image-outline" style = "background-color: #008080;">
-            <img src="../Images/Office.jpg" alt="ATU Career Path Logo" style = "float: right; margin-right: 0px; margin-left: 20px; margin-bottom: 15px;">
+            <img src="../Images/Calendar.jpg" alt="ATU Career Path Logo" style = "float: right; margin-right: 0px; margin-left: 20px; margin-bottom: 15px;">
         </div>
     </div>
 
     <div class="subsection">
         <div class="image-outline" style = "background-color: #B1D5E6;" >
-            <img src="../Images/Office.jpg" alt="ATU Career Path Logo">
+            <img src="../Images/Question.png" alt="ATU Career Path Logo">
         </div>
         
         <div class="text-content">
@@ -118,11 +138,11 @@
                 <span  style = "width: 25%;"></span>
             </div>
 
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                sunt in culpa qui officia deserunt mollit anim id est laborum. 
+            <p> Students can easily connect with professional career advisors through our dedicated queries form, designed to address any 
+                concerns or questions they may have about their career journey. Whether seeking personalized guidance on career planning, 
+                navigating job opportunities, or addressing specific challenges, students can submit their queries directly to our team of 
+                experts. This seamless communication channel ensures that every student has access to tailored advice and support, empowering 
+                them to take confident steps toward achieving their professional goals.
             </p>
         </div>
     </div>
@@ -179,5 +199,7 @@
 
 
 </body>
+
+<script src = "../JS/Utils.js"></script>
 
 </html>
