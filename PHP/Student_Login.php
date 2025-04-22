@@ -11,7 +11,6 @@
 
 
 
-
 </head>
 
 <body>
@@ -35,11 +34,12 @@
         <h1> Sign In </h1>
         <div id = "login" >
            
+        <form id = "login_form" onsubmit = "loginUser()">
 
              <div class="form-element">
-                <label class="form-label" for="login_username">Student Email: </label>
+                <label class="form-label" for="login_email">Student Email: <p id = "email_message"></p> </label>
                 <div class="input-div">
-                    <input class = "form-control" type="text" id = "login_username" name = "login_username" required>
+                    <input class = "form-control" type="text" id = "login_email" name = "login_email" required>
                     <div class="icons">
                         <i class="fa-solid fa-envelope"></i>
                     </div>
@@ -47,7 +47,7 @@
             </div>
 
             <div class="form-element">
-                <label class="form-label" for="login_password">Password: </label>
+                <label class="form-label" for="login_password">Password:  <p id = "password_message"></p>  </label>
                 
                 <div class="input-div">
                     <input class = "form-control" type="password" id = "login_password" name = "login_password" required>
@@ -59,9 +59,7 @@
 
 
             <div class="buttons">
-                <a href="Profile_Signed_In.php" style = "text-decoration: none;" >
                  <button type="submit" value = "Login" id = "loginButton" class="button-container btn btn-dark mt-5"  >Sign In</button>
-                 </a>
             </div>
 
             </div>
@@ -69,6 +67,8 @@
             <div id="login_response"></div>
             </div>
     </div>
+
+    </form>
 
 </div>
 </div>
@@ -81,4 +81,6 @@
 
 </body>
 
+
+<script src = "../JS/Login.js"></script>
 </html>

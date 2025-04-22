@@ -34,13 +34,13 @@
         </div>
         <h1>Organization Portal</h1>
         <h1> Sign In </h1>
-        <form id = "login" onsubmit = "loginUser()">
+        <form id = "login_form" onsubmit = "loginUser()">
            
 
              <div class="form-element">
-                <label class="form-label" for="login_username">Email: </label>
+                <label class="form-label" for="login_username">Email: <p id = "email_message"></p></label>
                 <div class="input-div">
-                    <input class = "form-control" type="text" id = "login_username" name = "login_username" required>
+                    <input class = "form-control" type="text" id = "login_email" name = "login_email" required>
                     <div class="icons">
                         <i class="fa-solid fa-envelope"></i>
                     </div>
@@ -48,7 +48,7 @@
             </div>
 
             <div class="form-element">
-                <label class="form-label" for="login_password">Password: </label>
+                <label class="form-label" for="login_password">Password: <p id = "password_message"></p>   </label>
                 
                 <div class="input-div">
                     <input class = "form-control" type="password" id = "login_password" name = "login_password" required>
@@ -63,9 +63,9 @@
 
 
             <div class="buttons">
-                <a href="Recipes.php" style = "text-decoration: none;">
+
                  <button type="submit" value = "Login" id = "loginButton" class="button-container btn btn-dark mt-5">Sign In</button>
-                 </a>
+
             </div>
 
             </form>
@@ -99,5 +99,5 @@
 
 
 </body>
-<script src = "../JS/Utils.js"></script>
+<script src = "../JS/Login.js"></script>
 </html>

@@ -8,11 +8,65 @@
 <link rel="stylesheet" href="../CSS/General_Styles.css">
 <link rel="stylesheet" href="../CSS/Queries.css">
 
-
-
-
-
 </head>
+<?php 
+session_start();
+$servername = "maggieproject";
+$username = "root";
+$password = "root";
+$dbname = "careers_db";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$icon_style = "display: none";
+$sign_in_button_style = "display: block";
+
+if(isset($_SESSION['user_id'])){
+    $icon_style = "display: block";
+    $sign_in_button_style = "display: none";
+
+    $check_user_type = "SELECT user_type from Users where user_id = " . $_SESSION['user_id'] . ";";
+    $check_user_type_result = $conn->query($check_user_type);
+
+    if ($check_user_type_result->num_rows > 0) {
+        $row = $check_user_type_result->fetch_assoc(); 
+        $user_type = $row['user_type']; // assign user_type value
+
+
+        if($user_type == "Student") {
+            $get_name = "SELECT first_name from Student_Profiles where user_id = " . $_SESSION['user_id'] . ";";
+            $get_name_result = $conn->query($get_name);
+        } else {
+            $get_name = "SELECT first_name from Employer_Profiles where user_id = " . $_SESSION['user_id'] . ";";
+            $get_name_result = $conn->query($get_name);
+        }
+    
+        if ($get_name_result->num_rows > 0) {
+            $row2 = $get_name_result->fetch_assoc(); 
+            $name = $row2['first_name']; // assign name value
+        } else {
+            $name = "";
+            echo "No results found!";
+        }
+
+    } else {
+        $name = "";
+        echo "Error!";
+    }
+
+    $_SESSION['first_name'] = $name;
+}
+
+
+
+$conn->close();
+
+?>
+
 
 <body>
 
@@ -32,7 +86,14 @@
             <a href = "Queries.php"><li style = "font-size: 1.8em;"> <i class="fa-solid fa-envelope"></i> </li></a>
             <a href = "Jobs.php"><li> Jobs </li></a>
             <a href = "Appointments.php"><li> Appointments </li></a>
-            <a href = "Choose.php"><li> <button class="login"> Sign In </button></li></a>
+            <a href = "Choose.php"><li id = "sign_in_button" style = "<?php echo $sign_in_button_style?>"> <button class="login"> Sign In </button></li></a>
+            <a href = "Profile.php" ><li id = "profile_icon" style = "<?php echo $icon_style?>"> 
+                <button class="profile">
+                    <?php if(isset($_SESSION['user_id'])){
+                        echo substr($_SESSION['first_name'], 0, 1);
+                    } ?>
+                </button></li>
+            </a>
         </ul>
     </div>
     
@@ -49,20 +110,20 @@
     <div class="form-content">
         <div class="form-header">
             <h1>Send Us Your Questions!</h1>
-            <p class = "subtext">Fill out the form and submit below</p>
+            <p class = "subtext">Fill out the form and submit below. You must be signed into your account to submit a query</p>
         </div>
-
-        <form action="/upload" method="POST" enctype="multipart/form-data">
+     
+        <form action="SendQuery.php" method="POST" enctype="multipart/form-data">
         <div class="form-body">
             <div class="form-element">
                 <label for="type-of-question">Type of Question &ensp; *</label>
-                <select name="type-of-question" id="type-of-quest" required>
+                <select name="type-of-question" id="type-of-question" required>
                     <option value="default">Select One</option>
-                    <option value="apply-for-jobs">Applying For Jobs</option>
-                    <option value="cv-help">CV Help and Feedback</option>
-                    <option value="career-advice">Career Advice</option>
-                    <option value="find-part">Find Part Time Work</option>
-                    <option value="other">Other</option>
+                    <option value="Applying for jobs">Applying For Jobs</option>
+                    <option value="CV Help">CV Help and Feedback</option>
+                    <option value="Career Advice">Career Advice</option>
+                    <option value="Part Time Work">Find Part Time Work</option>
+                    <option value="Other">Other</option>
                 </select>
             </div>
 
@@ -73,7 +134,7 @@
 
             <div class="form-element">
                 <label for="question-description">Message &ensp;*</label>
-                <textarea name="question-description" id="question-description"></textarea>
+                <textarea name="question-description" id="question-description" required></textarea>
             </div>
 
             <div class="form-element" id = "upload-stuff">
@@ -89,8 +150,23 @@
                 <span class = "separator"></span>
             </div>
 
+            <?php if(isset($_SESSION['error_message'])){
+                echo "<div class='form-element'>";
+                    echo "<p style = 'color: red'>" . $_SESSION['error_message']. "</p> ";
+                echo "</div>";
+            }
+          
+               
+            ?>
             <div class="form-element" id = "submit-div">
-                <button type="submit" value = "Submit" id = "submit" >Send</button>
+            <?php 
+            if(isset($_SESSION['user_id'])){
+                echo "<button type='submit' value = 'Submit' id = 'submit' >Send</button>";
+            } else {
+                echo "<button type = 'button' id = 'submit' onclick = 'window.location.href=\"Choose.php\" ' >Send</button>";
+
+            }
+            ?>
             </div>
 
         </div>
@@ -101,7 +177,6 @@
 
 <div class = "divider" ></div>
 
-
 <footer>
     <div class="footer">
         <div class="logo_background">
@@ -111,35 +186,28 @@
 
         <div class="footer-navigation">
         
+
             <ul>
-                <li>Legal</li>
-                <li>ATU Privacy Policy </li>
-                <li>Terms and Conditions </li>
-                <li>Accessibility</li>
+                <li class = 'head-item'>Useful Sites </li>
+                <a target = "_blank" href = "https://gradireland.com/"><li>GradIreland</li></a>
+                <a target = "_blank" href = "https://www.linkedin.com/"><li>LinkedIn</li></a>
+                <a target = "_blank" href = "https://ie.indeed.com/"><li>Indeed</li></a>
+                <a target = "_blank" href = "https://www.atu.ie/student-life/student-support/careers/students-and-graduates"><li>Careers Services</li></a>
             </ul>
 
             <ul>
-                <li>Useful Sites </li>
-                <li>GradIreland</li>
-                <li>LinkedIn</li>
-                <li>Indeed</li>
-                <li>Career Advice</li>
+                <li class = 'head-item'>Go To</li>
+                <a href = "Jobs.php"><li>Jobs </li></a>
+                <a href = "Appointments.php"><li>Appointments </li></a>
+                <a href = "Queries.php"><li>Queries</li></a>
             </ul>
 
             <ul>
-                <li>Go To</li>
-                <li>Jobs </li>
-                <li>Appointments </li>
-                <li>Queries</li>
-                <li>Your Profile</li>
-            </ul>
-
-            <ul>
-                <li>Follow Us</li>
-                <li> <i class="fa-brands fa-linkedin"></i> LinkedIn</li>
-                <li> <i class="fa-brands fa-square-facebook"></i> Facebook</li>
-                <li> <i class="fa-brands fa-instagram"></i> Instagram</li>
-                <li> <i class="fa-brands fa-tiktok"></i> TikTok</li>
+                <li class = 'head-item'>Follow Us</li>
+                <a target = "_blank" href = "https://www.linkedin.com/in/gmit-careers-service-guidance/?originalSubdomain=ie"><li> <i class="fa-brands fa-linkedin"></i> LinkedIn</li></a>
+                <a target = "_blank" href = "https://www.facebook.com/GMITCareersOffice/"><li> <i class="fa-brands fa-square-facebook"></i> Facebook</li></a>
+                <a target = "_blank" href = "https://www.instagram.com/atugalwaycity/?hl=en"><li> <i class="fa-brands fa-instagram"></i> Instagram</li></a>
+                <a target = "_blank" href = "https://www.tiktok.com/@atugalwaycity"><li> <i class="fa-brands fa-tiktok"></i> TikTok</li></a>
             </ul>
 
         </div>
