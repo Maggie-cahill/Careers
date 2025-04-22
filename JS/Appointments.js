@@ -9,11 +9,10 @@ const day = String(today.getDate()).padStart(2, '0');
 const formattedDate = `${year}-${month}-${day}`;
 
 
-
+// date dropdown 
 datePicker.addEventListener("change", () => {
     console.log(datePicker.value); // This should log the selected date
 });
-
 
 flatpickr( "#date-picker", {
     
@@ -29,6 +28,7 @@ flatpickr( "#date-picker", {
 });
 
 
+// customized timeslot functionality
 document.addEventListener("DOMContentLoaded", function () {
     let modal = document.getElementById("time-modal");
     let buttons = document.querySelectorAll(".timeslots input[type='radio']");
@@ -54,22 +54,19 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 
+// show appointment modal and send appointment type with form
 function showFormModal(event) {
     let selectedType = event.target.getAttribute("data-type"); 
-    
-    // Debugging: Check if selectedType is actually being captured
-    console.log("Selected Type:", selectedType);
 
-    // Ensure the appointment type field gets updated
+    // assign datatype to appointment type for form
     document.getElementById("appointment-type").value = selectedType ? selectedType : "Not selected"; 
     
-    // Show the pop-up form
     document.getElementById("booking-form-div").style.display = "flex";
     document.getElementById("backdrop").style.display = "block";
 }
 
 
-
+// close apppointment modal
 function closeFormModal() {
     let booking_form = document.getElementById("booking-form-div");
     let backdrop = document.getElementById("backdrop");
@@ -78,9 +75,6 @@ function closeFormModal() {
     document.getElementById("booking").reset();
     document.getElementById("upload-file").value = "";
     document.getElementById("file-list").innerHTML = "";
-    
-
-
 }
 
 

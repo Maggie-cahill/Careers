@@ -16,12 +16,15 @@ function showCV() {
 
 }
 
+
 function showSavedJobs() {
     account.style.display = "none";
     cv.style.display = "none"
     savedJobs.style.display = "block";
 }
 
+
+// save jobs functionality for profile section
 function saveJobs(event, job_id) {
     button = button = event.currentTarget;
     let jobListing = button.closest('.job-listing'); // Get the job container
@@ -56,6 +59,9 @@ function saveJobs(event, job_id) {
     });
 }
 
+
+
+// remove saved job listing
 function removeJobInformation(event, job_id) {
     button = button = event.currentTarget;
     let jobListing = button.closest('.job-listing'); // Get the job container
@@ -91,7 +97,7 @@ function removeJobInformation(event, job_id) {
 }
 
 
-
+// open saved job information
 function viewSavedJob(job_id) {
     let jobs = document.getElementById('listed-jobs');
     let header = document.getElementById('saved-header');
@@ -120,6 +126,8 @@ function viewSavedJob(job_id) {
     });
 }
 
+
+// return to saved job listings
 function returnToSaved() {
     let jobs = document.getElementById('listed-jobs');
     let header = document.getElementById('saved-header');

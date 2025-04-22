@@ -1,9 +1,8 @@
-
-
+// open select dropdown list
 function toggleDropdown(event) {
-    if (!event) return; // Prevent undefined event errors
+    if (!event) return;
 
-    event.stopPropagation(); // Stop event from propagating
+    event.stopPropagation();
 
     let dropdownOptions = event.currentTarget.querySelector(".dropdown-options");
 
@@ -12,20 +11,17 @@ function toggleDropdown(event) {
         return;
     }
 
-    // Close other open dropdowns first
     document.querySelectorAll(".dropdown-options").forEach(options => {
         if (options !== dropdownOptions) {
             options.classList.remove("show");
         }
     });
 
-    // Toggle the clicked dropdown
     dropdownOptions.classList.toggle("show");
 }
 
 
 function updateSelection() {
-    // Create an object to store selected filters
     let selectedFilters = {
         roleType: [],
         environment: [],
@@ -35,7 +31,7 @@ function updateSelection() {
         search: ""
     };
 
-    // Collect all selected filter options
+    // gather select filters
     document.querySelectorAll(".dropdown-options input:checked").forEach(input => {
         let category = input.closest(".custom-dropdown").querySelector(".dropdown-selected").id;
         if (selectedFilters[category]) {
@@ -43,25 +39,20 @@ function updateSelection() {
         }
     });
 
-    // Retrieve the search keyword (either from input or URL)
+    // get the search keyword from input or url (home page)
     let urlParams = new URLSearchParams(window.location.search);
     let searchInput = document.getElementById("search-keyword").value.trim().toLowerCase();
     let searchQueryFromURL = urlParams.get("query");
 
-    // Prioritize input field value; fall back to URL parameter if empty
+    // Prioritize input field value or use URL parameter if empty
     selectedFilters.search = searchInput ? searchInput : (searchQueryFromURL ? searchQueryFromURL.toLowerCase() : "");
-
-    // Debugging output (check filters are being set correctly)
-    console.log("Selected Filters:", selectedFilters);
-
-    // Apply the updated filters to job listings
     filterJobs(selectedFilters);
 }
 
 
 
-let currentPage = 1;
 
+// Filter Jobs based search or select 
 function filterJobs(filters, page = 1) {
     filters.page = page;
 
@@ -79,22 +70,22 @@ function filterJobs(filters, page = 1) {
     });
 }
 
+let currentPage = 1;
 
-
+// turn the page of the filtered search
 function changePage(page) {
     currentPage = page;
   
-    let filters = getCurrentFilters(); // Function that retrieves selected filters
+    let filters = getCurrentFilters(); 
     filterJobs(filters, currentPage);
     console.log("Current page is: ", currentPage);
 
-    // Scroll to the top smoothly
     window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 
 
-// Ensure filters persist between page navigation
+// keep filters between page navigation
 function getCurrentFilters() {
     let filters = {
         roleType: [],
@@ -117,7 +108,7 @@ function getCurrentFilters() {
 
 
 
-
+// Save jobs in database
 function saveJobs(event, job_id) {
     button = button = event.currentTarget;
 
@@ -130,7 +121,7 @@ function saveJobs(event, job_id) {
     })
     .then(response => {
         if (response.ok) {
-            return response.json(); // or response.json() based on your response type
+            return response.json(); 
         }
         throw new Error('Network response was not ok.');
     })
@@ -151,11 +142,6 @@ function saveJobs(event, job_id) {
                 }
                 button.className = "save_button";
             }
-            
-
-        // **Only update buttons that contain "Save" in their text**
-       
-         
 
     });
         
@@ -166,34 +152,32 @@ function saveJobs(event, job_id) {
 }
 
 
-
+// show the first listed job for job information
 document.addEventListener("DOMContentLoaded", function () {
-       // Get first listed job item and load its details
+
+       // get first listed job item and load its details
        const firstJob = document.querySelector(".job-listing");
        if (firstJob) {
            const jobId = firstJob.getAttribute("job-id");
            showJob(jobId);
        }
  
-    // Get search parameter from URL
     let urlParams = new URLSearchParams(window.location.search);
-    let searchKeyword = urlParams.get("query"); // Get 'query' parameter
+    let searchKeyword = urlParams.get("query"); 
 
    
-    // If a search term exists, populate the input field and trigger filtering
+    // if there is a search keyword, filter based on input
     if (searchKeyword) {
         document.getElementById("search-keyword").value = searchKeyword.trim();
         updateSelection(); // Run filtering with search term
         window.history.replaceState(null, null, window.location.pathname);
     }
-
   
 });
 
 
-
+// show job information when clicking on listed items (right panel of jobs page)
 function showJob(job_id) {
-
 
     fetch('JobShow.php', {
         method: 'POST',
@@ -202,12 +186,12 @@ function showJob(job_id) {
     })
     .then(response => {
         if (response.ok) {
-            return response.text(); // or response.json() based on your response type
+            return response.text(); 
         }
         throw new Error('Network response was not ok.');
     })
     .then(data => {
-        document.getElementById('job-information').innerHTML = data; // Display the response
+        document.getElementById('job-information').innerHTML = data; 
     })
     .catch((error) => {
         console.error('Error:', error);
@@ -215,9 +199,9 @@ function showJob(job_id) {
 }
 
 
-
+// home page search box, transport to jobs page with search query
 document.querySelector(".search-and-find button").addEventListener("click", function(event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault(); 
     let keyword = document.querySelector(".find").value.trim();
     if (keyword !== "") {
         window.location.href = "Jobs.php?query=" + encodeURIComponent(keyword);

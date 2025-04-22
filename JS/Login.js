@@ -1,3 +1,4 @@
+// login any user type
 function loginUser() {
     event.preventDefault();
     const formData = new FormData(document.getElementById('login_form'));
@@ -30,6 +31,7 @@ function loginUser() {
 }
 
 
+// form handle the personal details section of create account section
 function validatePersonalDetails() {
     let firstName = document.getElementById("create_first").value.trim();
     let lastName = document.getElementById("create_last").value.trim();
@@ -118,7 +120,7 @@ function validatePersonalDetails() {
 
 
     
-    // Check if email exists before proceeding
+    // check if email exists before proceeding
     fetch("CheckPersonalDetails.php", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -129,7 +131,7 @@ function validatePersonalDetails() {
         if (data.exists) {
             error_message.innerHTML = "* Email already exists! Please use a different one.";
         } else {
-            // Move to next section
+
             document.getElementById("personal-details").style.display = "none";
             document.getElementById("organization-details").style.display = "flex";
 
@@ -142,6 +144,8 @@ function validatePersonalDetails() {
 }
 
 
+
+// form handle the organization details section of create account section
 function validateOrganization() {
     let name = document.getElementById("create_organization").value;
     let address = document.getElementById("create_address").value;
@@ -152,13 +156,13 @@ function validateOrganization() {
 
     
     let error_message = document.getElementById("error_message");
-    // Validation checks
+
     if (!name || !address || !eircode || city == "default" || country == "default" || !agency) {
          error_message.innerHTML = "* Please fill in and select all required fields!";
         return;
     }
 
-    // Validate names
+
     nameError = validateName(name);
     if (nameError!= "Valid") {
       error_message.innerHTML = nameError;
@@ -202,6 +206,8 @@ function validateOrganization() {
     document.getElementById("public-profile").style.display = "flex";
 }
 
+
+// check final registery for account and submit to database
 function createAccount(event) {
     event.preventDefault();
     let biography = document.getElementById("biography").value;
@@ -264,7 +270,6 @@ function createAccount(event) {
 
 
 
-// Email validation helper function
 function validateEmail(email) {
     let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
