@@ -14,3 +14,6 @@ const video = document.getElementById('logo_animation');
         video.currentTime = 0;
         video.pause();
     });
+
+
+

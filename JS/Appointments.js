@@ -54,18 +54,33 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 
-function showFormModal() {
-    let booking_form = document.getElementById("booking-form-div");
-    let backdrop = document.getElementById("backdrop");
-    backdrop.style.display = "block";
-    booking_form.style.display = "flex";
+function showFormModal(event) {
+    let selectedType = event.target.getAttribute("data-type"); 
+    
+    // Debugging: Check if selectedType is actually being captured
+    console.log("Selected Type:", selectedType);
+
+    // Ensure the appointment type field gets updated
+    document.getElementById("appointment-type").value = selectedType ? selectedType : "Not selected"; 
+    
+    // Show the pop-up form
+    document.getElementById("booking-form-div").style.display = "flex";
+    document.getElementById("backdrop").style.display = "block";
 }
+
+
 
 function closeFormModal() {
     let booking_form = document.getElementById("booking-form-div");
     let backdrop = document.getElementById("backdrop");
     booking_form.style.display = "none";
     backdrop.style.display = "none";
+    document.getElementById("booking").reset();
+    document.getElementById("upload-file").value = "";
+    document.getElementById("file-list").innerHTML = "";
+    
+
+
 }
 
 

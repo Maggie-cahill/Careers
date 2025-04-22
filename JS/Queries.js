@@ -27,24 +27,4 @@ fileInput.addEventListener('change', () => {
 
 
 
-// // Handle form submission
-// uploadForm.addEventListener('submit', (event) => {
-//     event.preventDefault(); // Prevent default form submission
 
-//     const formData = new FormData(); // Create a new FormData object
-
-//     // Add each file from `allFiles` to the FormData
-//     allFiles.forEach(file => {
-//         formData.append('filename[]', file);
-//     });
-
-//     // Submit the formData via Fetch API or XMLHttpRequest (example with Fetch API)
-//     fetch(uploadForm.action, {
-//         method: 'POST',
-//         body: formData,
-//     }).then(response => {
-//         console.log('Files uploaded successfully:', response);
-//     }).catch(error => {
-//         console.error('Error uploading files:', error);
-//     });
-// });
