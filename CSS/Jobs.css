@@ -13,32 +13,44 @@
 }
 
 
-.form-element:nth-of-type(1) {
+.form-element.search {
     width: 60%;
     margin-right: 60px;
     position: relative;
 }
 
-#search-keyword {
+.filter-content {
+    display: flex;
     width: 100%;
+    gap: 15px;
+    
+}
+
+#search-keyword {
+    width: 92.5%;
     height: 40px;
     border-radius: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
     margin-right: 10px;
     border: 2px solid white;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.112);
     padding-left: 45px;
     font-family: "ITC Avant Garde Gothic", serif;
+
 }
 
-#select-keyword:focus {
-    border: 0px solid black !important;
+#search-keyword:focus {
+    outline: none; /* Removes the default black outline */
+    box-shadow: 0px 0px 5px rgb(137, 214, 255);
 }
+
 
 .form-element select {
-    height: 45px;
     border-radius: 5px;
     padding: 10px;
-    font-family: "Gordita light", serif;
+    font-family: "ITC Avant Garde Gothic", serif;
+    font-weight: 400;
     font-size: 1em;
     letter-spacing:1.4px;
     background-color: rgb(21, 21, 85);
@@ -46,12 +58,177 @@
 }
 
 
+.form-element select option:selected {
+    background-color: rgb(73, 73, 155);
+}
+
+.form-element select option:disabled {
+    color: white;
+    font-weight: bold;
+    background-color:  rgb(21, 21, 85);
+}
+
+.form-element select option:disabled:hover {
+    color: white;
+
+}
+
 .search-and-find i {
     font-size: 1em;
     transition: font-size 250ms ease-in-out;
 }
 
 
+/* ---- */
+
+.select-body {
+    position: relative;
+    height: 40px;
+    margin: 5px 0 20px 0;
+
+}
+
+.select-body select {
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    border: none;
+    appearance: none;
+    padding: 0 40px 0 10px;
+    color: white;
+    appearance: none; /* Removes default styling */
+    width: 100%;
+    max-height: 200px; /* Limits dropdown expansion */
+    overflow-y: auto; /* Enables scrolling inside dropdown */
+}
+
+#select-category-container select {
+    background-color:  rgb(21, 21, 85);
+    
+}
+
+select option {
+    max-height: 40px;
+    padding-right: 30px;
+}
+
+
+
+
+
+/* ------------------------------ Custom */
+
+.form-element {
+    width: fit-content;
+}
+.custom-dropdown {
+    position: relative;
+    text-align: left;
+    border-radius: 5px;
+    padding: 15px;
+    padding-right: 50px;
+    font-family: "ITC Avant Garde Gothic", serif;
+    font-weight: 400;
+    font-size: 1em;
+    letter-spacing:1.4px;
+    background-color: rgb(21, 21, 85);
+    color: white;
+    
+}
+
+.dropdown-selected {
+    font-weight: bold;
+}
+
+.dropdown-options {
+    display: none;
+    position: absolute;
+    width: fit-content;
+    max-height: 250px; /* Allows scrolling */
+    overflow-y: auto;
+    background-color: rgb(73, 73, 155);
+    background: linear-gradient(to bottom,  rgb(21, 21, 85),#2d6883 );
+    z-index: 5;
+    border: 0px solid #ffffff;
+    border-radius: 8px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Checkbox Styling */
+.option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.option:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Open dropdown with smooth animation */
+.dropdown-options.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(10px);
+    transform: translate(-15px, 5px);
+    padding-top: 20px;
+    padding-right: 10px;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+.dropdown-options input[type="checkbox"] {
+    accent-color: #FFA500 ; /* Change to any color */
+    color: white;
+    border: 1px solid white;
+  }
+  
+
+
+.select-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+
+.select-icon i {
+    font-size: 1.2em;
+    color: white;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+
+/* Target the dropdown container */
+.dropdown-options::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dropdown-options::-webkit-scrollbar-track {
+    background: #f1f1f100;
+}
+
+.dropdown-options::-webkit-scrollbar-thumb {
+    background: #c7cffe;
+    border-radius: 10px;
+}
+
+/* ------------*/
 
 #glass {
     position: absolute;
@@ -75,7 +252,7 @@
     justify-content: center;
     align-items: center;
     top: 0px;
-    right: -50px;
+    right: 0px;
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -120,14 +297,58 @@
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
+    position: relative;
+    padding-bottom: 80px;
 }
 
+#extended-job-list {
+    width: 33%;
+    height: 100%;
+    overflow-y:scroll;
+}
 
 #job-list {
     border: 0px solid black;
-    width: 33%;
-    height: 100%;
+    padding-bottom: 130px;
+    padding-top: 20px;
+    padding: 20px 10px 20px 10px;
+    position: relative;
 }
+
+.bottom-blur {
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    bottom: -20px;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2),rgb(255, 255, 255) 50%) ;
+}
+
+.pagination {
+    position: absolute;
+    bottom: -15px;
+    font-family: "Gordita Medium", serif;
+    
+}
+
+.page_buttons {
+    border: 0px solid white;
+    background-color: #007bff00;
+    padding: 15px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.page_buttons i {
+    color: teal;
+    font-size: 1.3em;
+    transition: color 200ms ease-in-out;
+}
+
+.page_buttons i:hover {
+    color: rgba(0, 128, 128, 0.511);
+}
+
 
 #job-information {
     border: 0px solid black;
@@ -147,9 +368,26 @@
 }
 
 
+#extended-job-list::-webkit-scrollbar {
+    width: 5px; /* Width of the vertical scrollbar */
+    height: 4px; /* Height of the horizontal scrollbar */
+    color: white;
+    transition: opacity 300ms ease-in-out;
+}
+
+
 
 /* The track (background of the scrollbar) */
 #job-information::-webkit-scrollbar-track {
+    background: #f1f1f100; /* Light gray */
+    border-radius: 10px; /* Rounded corners */
+    margin: 20px;
+    margin-left: 10px;
+    display: block;
+}
+
+/* The track (background of the scrollbar) */
+#extended-job-list::-webkit-scrollbar-track {
     background: #f1f1f100; /* Light gray */
     border-radius: 10px; /* Rounded corners */
     margin: 20px;
@@ -164,14 +402,29 @@
     transition: background-color 0.3s ease;
 }
 
+#extended-job-list::-webkit-scrollbar-thumb {
+    background: rgba(0, 128, 128, 0); /* Blue color */
+    border-radius: 10px;
+    margin-left: 20px;
+    transition: background-color 0.3s ease;
+}
+
 #job-information::-webkit-scrollbar-thumb {
     height: 5px; /* Set a shorter height */
     background: teal; /* Optional styling */
 }
 
+
+#extended-job-list::-webkit-scrollbar-thumb {
+    height: 5px; /* Set a shorter height */
+    background: rgba(0, 128, 128, 0); /* Optional styling */
+}
+
 #job-information::-webkit-scrollbar-thumb:hover {
     background-color: rgb(0, 60, 60); /* Darker blue on hover */
 }
+
+
 
 
 /* Job Listings */
@@ -209,13 +462,60 @@
     font-size: 1.2em;
 }
 
-.job-listing p {
+.job-listing p, .job-skills ul li{
     font-size: .6em;
     font-family: "ITC Avant Garde Gothic", serif;
     color: rgba(0, 0, 0, 0.64);
 }
 
-.job-listing button {
+.job-skills ul li {
+    font-size: 1em;
+    font-family: "ITC Avant Garde Gothic", serif;
+    color: rgba(0, 0, 0, 0.786);
+}
+
+.options {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px;
+}
+
+.options button {
+    height: 50px;
+    padding: 25px;
+    font-size: 1.6em;
+    font-family: "Gordita Medium", serif;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
+    position: static;
+}
+
+
+.options .apply-button {
+    background-color: rgb(21, 21, 85);
+    border: 2px solid rgb(21, 21, 85);   
+    color: white;
+}
+
+.options .apply-button:hover {
+    background-color: #3f89ab;
+    border: 2px solid #3f89ab;
+}
+
+
+
+.options a {
+    text-decoration: none;
+    
+}
+
+.save_button {
     position: absolute;
     bottom: 10px;
     right: 15px;
@@ -224,23 +524,57 @@
     background-color: #cdcdcd10;
     border-radius: 5px;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.115);
-
+    color: teal;
     transition: background-color 300ms ease-in-out;
 }
 
-.job-listing i {
+
+
+
+.save_button i {
     color: teal;
     transition: color 300ms ease-in-out;
 }
 
-.job-listing button:hover {
+.save_button:hover {
     background-color: teal;
-}
-
-.job-listing button:hover > i {
     color: white;
 }
 
+.save_button:hover > i {
+    color: white;
+}
+
+
+ .unsave_button {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    padding: 7px;
+    border: 2px solid white;
+    background-color: teal;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.115);
+    color: white;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+
+
+
+.unsave_button i {
+    color: white;
+    transition: color 300ms ease-in-out;
+}
+
+.unsave_button:hover {
+    background-color: #cdcdcd10;
+    color: teal;
+}
+
+.unsave_button:hover > i {
+    color: teal;
+}
 
 /* Job Description and Information */
 
@@ -264,10 +598,18 @@
 
 
 
-.position-info h3 {
+.position-info h3, .job-dates h3 {
     font-size: 1em;
     font-family: "ITC Avant Garde Gothic", serif;
     font-weight: 400;
+}
+
+.job-dates h3:first-of-type {
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: "Gordita Medium", serif;
 }
 
 .position-info button {
@@ -290,9 +632,10 @@
 
 }
 
-.general-details h3 {
+h3 {
     width: 100%;
     margin-bottom: 0;
+    font-size: 1.5em;
 }
 
 .general-details button {
@@ -306,38 +649,13 @@
     align-items: center;
 }
 
-.options {
-    margin-top: 50px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 15px;
-}
-
-.options button {
-    height: 50px;
-    padding: 25px;
-    font-size: 1.6em;
-    font-family: "Gordita Medium", serif;
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    border-radius: 20px;
-    background-color: #008080 ;
-    color: white;
-    border: 2px solid #008080;
-}
-
-.options button:nth-of-type(2) {
-    background-color: white;
-    color:#135066;
-    border: 2px solid #135066;
-}
-
-
 
 .job-body-content {
     margin-top: 80px;
+}
+
+.job-body-content div {
+    margin-bottom: 35px;
 }
 
 .job-body-content p{

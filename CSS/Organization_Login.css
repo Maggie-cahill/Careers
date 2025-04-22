@@ -29,6 +29,10 @@
     width: 70px;
 }
 
+#email_message {
+    left: 55px;
+}
+
 .short-line {
     display: block;
     border: 1px solid black;

@@ -84,6 +84,16 @@
     padding: 30px;
 }
 
+.link a {
+    text-decoration: none;
+    color: black;
+    transition: color 200ms ease-in-out;
+}
+
+.link a:hover {
+    color: rgb(167, 227, 227);
+}
+
 
 .header {
     width: 100%;
@@ -183,6 +193,20 @@
 }
 
 
+.user-details:has(button:disabled):hover {
+    background-color: white;
+}
+
+
+.security button:has(button:disabled):hover {
+    background-color: white;
+}
+
+.edit:disabled {
+    pointer-events: none;
+}
+
+
 
 .security h3 {
     font-size: 1.7em;
@@ -216,15 +240,16 @@
 /* Profile and CV Descriptions */
 
 
-.profile-and-cv {
+#profile-and-cv {
     width: 100%;
     padding: 30px;
     height: 1000px;
     overflow-y: scroll;
     overflow-x: hidden;
+    display: none;
 }
 
-.profile-and-cv::-webkit-scrollbar {
+#profile-and-cv::-webkit-scrollbar {
     width: 5px; /* Width of the vertical scrollbar */
     height: 4px; /* Height of the horizontal scrollbar */
     color: white;
@@ -234,7 +259,7 @@
 
 
 /* The track (background of the scrollbar) */
-.profile-and-cv::-webkit-scrollbar-track {
+#profile-and-cv::-webkit-scrollbar-track {
     background: #f1f1f100; /* Light gray */
     border-radius: 10px; /* Rounded corners */
     margin: 20px;
@@ -242,23 +267,23 @@
     display: block;
 }
 
-.profile-and-cv::-webkit-scrollbar-thumb {
+#profile-and-cv::-webkit-scrollbar-thumb {
     background: teal; /* Blue color */
     border-radius: 10px;
     margin-left: 20px;
     transition: background-color 0.3s ease;
 }
 
-.profile-and-cv::-webkit-scrollbar-thumb {
+#profile-and-cv::-webkit-scrollbar-thumb {
     height: 5px; /* Set a shorter height */
     background: teal; /* Optional styling */
 }
 
-.profile-and-cv::-webkit-scrollbar-thumb:hover {
+#profile-and-cv::-webkit-scrollbar-thumb:hover {
     background-color: rgb(0, 60, 60); /* Darker blue on hover */
 }
 
-.profile-and-cv h1 {
+#profile-and-cv h1 {
     font-size:3em;
 }
 
@@ -578,20 +603,30 @@ input[type="file"] {
 /* Saved Jobs Styling */
 
 
-.saved-jobs {
+#saved-jobs {
     width: 100%;
     padding: 30px;
+    display: none;
 }
 
-.saved-jobs h1 {
+#saved-jobs h1 {
     font-size:3em;
 }
 
+
+.listed-jobs {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+}
 
 .job-listing {
     border: 0px solid black;
     border-radius: 20px;
     padding: 15px;
+    width: 40%;
+    min-height: 250px;
+    min-width: 100px;
     position: relative;
     background-color: #ffffff2b;
     margin-bottom: 15px;
@@ -631,9 +666,6 @@ input[type="file"] {
     position: absolute;
     display: flex;
     gap: 15px;
-    bottom: 10px;
-    right: 15px;
-
     transition: background-color 300ms ease-in-out;
 }
 
@@ -646,27 +678,113 @@ input[type="file"] {
     display: flex;
     gap: 10px;
     font-family: "Gordita Medium", serif;
-    color: teal;
+    position: absolute;
     align-items: center;
-    background-color: white;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.115);
+    bottom: 10px;
+    right: 15px;
 
     transition: color 300ms ease-in-out;
 }
 
+.job-listing button i {
+    transition: color 300ms ease-in-out;
+}
 
 .job-listing button:hover {
-    background-color: teal;
+    background-color: white;
 }
 
 .job-listing button:hover > i, .job-listing button:hover {
-    color: white;
+    color: teal;
 }
 
 .job-listing button:focus {
     background-color: rgb(7, 87, 87);
     border-color: white;
+    color: white;
 }
 
+.job-listing button:focus > i{
+    color: white;
+}
 
+#view-job {
+    padding: 45px;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0px 0px 5px rgba(3, 77, 68, 0.825);
+    display: none;
+}
 
+#view-job .back-button {
+   
+    width: fit-content;
+    height: fit-content;
+    
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 35px;
+    left: 25px;
+}
+
+#view-job .back-button i {
+    color: teal;
+    font-size: 2em;
+    transition: color 200ms ease-in-out;
+}
+
+#view-job .back-button i:hover {
+    color: rgba(0, 128, 128, 0.538);
+}
+
+#view-job h2, h3{
+    font-size: 1.2em;
+}
+
+#view-job img {
+    height: 70px;
+    width: 70px;
+}
+
+#view-job button {
+    height: 50px;
+    padding: 10px 15px 10px 15px;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+#view-job .company-header {
+    position: absolute;
+    top: 0px;
+    height: 120px;
+    left: 110px;
+}
+
+#view-job .company-header h1 {
+    font-size: 2em;
+}
+
+#view-job .position-info {
+    margin-top: 80px;
+}
+
+.logout {
+    padding: 15px;
+    font-size: 1.2em;
+    border-radius: 15px;
+    background-color: rgb(163, 20, 20);
+    color: white;
+    border: 2px solid white;
+    box-shadow: 3px 3px 3px rgba(62, 62, 62, 0.441);
+    font-family: "Gordita Medium", serif;
+}
+
+.logout:hover {
+    background-color:  rgb(106, 4, 4) !important;
+}
+
+.logout:focus {
+    background-color: rgb(219, 79, 79);
+}

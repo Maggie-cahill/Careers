@@ -211,7 +211,7 @@ td:first-of-type, td:nth-of-type(2) {
     width: 100%;
     height: 100%;
     position:absolute;
-    z-index: 5;
+    z-index: 11;
     display: none;
 }
 #booking-form-div {
@@ -221,7 +221,7 @@ td:first-of-type, td:nth-of-type(2) {
     right: 0;
     width: 100%;
     height: 100%;
-    z-index: 6;
+    z-index: 12;
     justify-content: center;
 
 }
@@ -236,12 +236,12 @@ td:first-of-type, td:nth-of-type(2) {
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.258);
     overflow-y: scroll;
     height: fit-content;
-    max-height: 630px;
+    max-height: 88vh;
     margin-top: 20px;
     
 }
 
-::-webkit-scrollbar {
+.booking-form::-webkit-scrollbar {
     width: 12px; /* Width of the vertical scrollbar */
     height: 12px; /* Height of the horizontal scrollbar */
 }
@@ -251,7 +251,7 @@ td:first-of-type, td:nth-of-type(2) {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 20px;
+    gap: 5px;
 }
 
 .form-element.describe {
@@ -259,8 +259,8 @@ td:first-of-type, td:nth-of-type(2) {
 }
 
 #describe {
-    width: 400px;
-    height: 100px;
+    width: 500px;
+    height: 70px;
     padding: 20px;
     border: 2px solid black;
     border-radius: 20px;
@@ -506,7 +506,7 @@ input[type="file"] {
     z-index: -1;
     top: 10px;
     left: 8px;
-    font-size: 17px;
+    font-size: 12px;
     color: #b8b8b8;
     max-width: 200px;
   }
@@ -518,12 +518,12 @@ input[type="file"] {
 
   .upload-button {
     display: inline-block;
-    padding: 12px 18px;
+    padding: 10px 13px;
     cursor: pointer;
     max-width: 200px;
     border-radius: 5px;
     background-color: #2325b3;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     color: #fff;
     transition: box-shadow 300ms ease-in-out, background-color 300ms ease-in-out;
@@ -581,7 +581,7 @@ input[type="file"] {
     font-family: "Gordita Medium", serif;
     border: 3px solid teal;
     border-radius: 20px;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 5px;
     margin-left: 0;
     transition: font-size 300ms ease-in-out, 300ms ease-in-out, box-shadow 300ms ease-in-out

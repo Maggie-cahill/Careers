@@ -1,0 +1,260 @@
+#login-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    font-size: .85em;
+    padding: 30px;
+    background-color: rgb(255, 210, 127);
+}
+
+#display-box {
+    width: 38vw;
+    border: 5px solid white;
+        border-radius: 30px;
+    max-height: 400px;
+    position: absolute;
+    left: 30px;
+    top: 80px;
+    background-color: rgb(65, 185, 141);
+    font-size: .85em;
+    color: white;
+}
+
+
+
+
+#display-box img {
+    width: 80%;
+}
+
+#display-content {
+    padding: 30px;
+}
+
+#image {
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 5px double rgb(65, 185, 141);
+}
+
+#personal-details, #organization-details, #public-profile{
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.432);
+    font-family: "Gordita Medium", serif;
+    max-width: 40vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    row-gap: 30px;
+    background-color: white;
+}
+
+#organization-details, #public-profile {
+    display:none;
+}
+
+input {
+    border-radius: 20px;
+    border: 0px solid white;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.412);
+    padding: 10px;
+    padding-left: 15px;
+    width: 100%;
+}
+
+input[type="radio"] {
+    box-shadow: none;
+}
+
+input[type="radio"]:focus {
+    box-shadow: none;
+}
+
+.radio-div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+input:focus {
+    outline: none; /* Removes the default black outline */
+    box-shadow: 0px 0px 5px rgb(247, 193, 0);
+}
+
+
+
+.form-element {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
+}
+
+
+label {
+    width: 100%;
+}
+
+
+.form-element select {
+    border-radius: 20px;
+    background-color: rgba(25, 125, 119, 0.63);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.412);
+    outline: none;
+    border: none;
+}
+
+
+.form-element select option:disabled {
+    background-color: rgba(24, 72, 68, 0.63);
+    color: white;
+
+}
+
+
+
+#title {
+    width: 100%;
+}
+
+#create_job_title_div {
+    width: 45%;
+}
+
+#create_email_div {
+    width: 100%;
+}
+
+#create_first_div, #create_last_div, #create_job_title_div, #create_password_div, #create_verify_password_div, #create_phone_number_type_div, #create_phone_div{
+    width: 45%;
+}
+
+#continue_div {
+    width: 100%;
+}
+
+.form-element button {
+    border-radius: 30px;
+    background-color: rgb(15, 71, 90);
+    font-family: "Gordita Medium", serif;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    margin-top: 35px;
+    border: 0px solid rgb(98, 132, 144) ;
+    font-size: 1.5em;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.379);
+    width: 100%;
+
+    transition: background-color 200ms ease-in-out;
+}
+
+.form-element button:hover {
+    background-color: rgb(41, 108, 130);
+}
+
+#create_address_div select {
+    margin-top: 20px;
+}
+
+.form-content .myFile {
+    background-color: blue;
+}
+
+#description_div {
+    width: 100%;
+}
+
+
+input[type="file"] {
+    position: absolute;
+    z-index: -1;
+    top: 10px;
+    left: 8px;
+    font-size: 12px;
+    color: #b8b8b8;
+    max-width: 200px;
+  }
+
+  .button-wrap {
+    position: relative;
+    width: fit-content;
+  }
+
+.upload-button {
+    display: inline-block;
+    padding: 10px 13px;
+    cursor: pointer;
+    max-width: 200px;
+    border-radius: 5px;
+    background-color: #2325b3;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    transition: box-shadow 300ms ease-in-out, background-color 300ms ease-in-out;
+
+  }
+
+  .upload-button:hover {
+    background-color: #090a7b; /* Slightly darker green */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+}
+
+
+#upload-stuff {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+#upload-stuff  label {
+    max-width: 200px;
+}
+
+.listedFiles  {
+    list-style-type: none;
+}
+
+.listedFiles li {
+    margin-bottom: 15px;
+    font-family: "ITC Avant Garde Gothic", serif;
+    font-style: italic;
+}
+
+ textarea {
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 4px grey;
+    width: 100%;
+    max-width: 600px;
+    height: 150px;
+    font-family: "ITC Avant Garde Gothic", serif;
+    padding: 1px 15px;
+}
+
+ textarea {
+    padding: 25px 15px;
+}
+
+#website_div {
+    width: 100%;
+}
+
+#error-message {
+    position: absolute;
+    height: 10px;
+    color: red;
+}
+
+#error {
+    width: 100%;
+}

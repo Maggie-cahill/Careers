@@ -121,6 +121,7 @@
     font-size: 1.4em;
     color: black;
     margin-left: 10px;
+    position: relative;
 }
 
 .form-element input {
@@ -210,5 +211,18 @@ img {
     background-color: rgb(38, 175, 175);
     color: white;
 }
+
+#email_message, #password_message {
+    position: absolute;
+    left: 115px;
+    font-size: .8em;
+    color: red;
+    bottom: -13px;
+}
+
+#password_message {
+    left: 82px;
+}
+
 
 

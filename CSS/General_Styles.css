@@ -22,6 +22,10 @@ p {
     align-items: center;
 }
 
+
+#profile_icon {
+    display: none;
+}
 .navbar li {
     display: inline;
     margin-right: 15px;
@@ -37,7 +41,7 @@ nav {
     position:sticky;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 10;
     box-shadow: 0px 1px 3px rgb(0, 57, 57);
 }
 
@@ -138,10 +142,19 @@ nav {
     letter-spacing: 1px;
     font-size: .9em;
     line-height: 25px;
-
+    transition: color 200ms ease-in-out;
 }
 
-.footer-navigation ul li:first-child {
+.footer-navigation a {
+    font-family: "ITC Avant Garde Gothic", serif !important;
+    text-decoration: none;
+    color: white;
+}
+
+.footer-navigation a:hover > li{
+    color: rgb(255, 180, 93);
+}
+.footer-navigation .head-item {
     font-size: 1.5em;
     font-weight: 700;
     margin-bottom: 25px;
